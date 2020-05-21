@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Afrika Home</title>
+        <style>
+            body{
+                box-sizing: border-box;
+               margin: 0;
+               padding: 0;
+                font-size: 1.2rem;  
+            }
+            .nav{
+                position: absolute;
+                right: 10px;
+                top: 25px;
+            }
+            .ham{
+                display: none;
+                position: absolute;
+                top: 30px;
+                right: 30px;
+            }
+            
+            a{
+                text-decoration: none;
+                padding-left:20px;
+            }
+            .header-container{
+                display: flex;
+                padding-left:40px;
+                width: 100%;
+                background-image: linear-gradient( white 70%, rgba(186, 212, 250, 0.5));
+                flex-wrap: wrap;
+                flex-direction: row;
+                align-items: stretch;
+                align-content: stretch;
+            }
+            .header-content h1{
+                font-size: 2.54em;
+                margin: 80px 0;
+                color: rgba(0, 0, 70, 0.7);
+            }
+            p{
+               opacity: 0.5;
+            }
+            .our-project{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 80px 0;
+                width: 170px;
+                height: 40px;
+                background:rgba(93, 93, 255, 0.8);
+                border-radius: 10px;
+                color: white;
+                box-shadow: 10px 10px 20px  rgba(186, 212, 250, 0.5);
+            }
+            .header-content{
+                flex: 1 0 300px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .card>img{
+                width: 190px;
+                margin-bottom: 40px;
+            }
+            .card.card{
+                border-radius: 10px;
+                margin: 0 30px;
+                padding: 20px;
+                width: 350px;
+                height: 350px;
+                box-shadow: 0px 10px 80px -20px #98C3E8;
+                display: flex;
+                flex-direction: column;
+                
+                
+            }
+            .card>*{
+                margin: 0;
+            }
+            .service{
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content:center;
+            }
+            .service-container{
+                width: 100vw;
+                padding:50px 0px;
+            }
+            .digit{
+                padding-left: 10vw;
+                width: 350px;
+                color:#316099 ; /*  #1F3F68; --blue-02: #316099; --blue-03: #356EAD; --blue-04: #5A98D0; --blue-05: #98C3E8;*/
+            }
+            .more{
+                display: flex;
+                align-items: center;
+                margin-top: auto;
+            }
+            .more *{
+                margin: 10px;
+            }
+            .project{
+                margin: 100px 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+            }
+            .project .container{
+               width:65vw 
+                
+            }
+            .project-head{
+                display: flex;
+            }
+            .project-head *{
+                flex: 1 1 300px;
+            }
+            .smart-home{
+                display: flex;
+                position: relative;
+               }
+            .smart-home *{
+             border-radius: 10px;
+             flex: 1 1 300px;
+            }
+            .bg{
+                opacity: 0.5;
+                position: relative;
+                width: 100%;
+            }
+            .bg img{
+                width: 100%;
+                min-width: 200px;
+            }
+            .smart-icon{
+                position: absolute;
+                min-width: 200px;
+                width: 100%;
+                top:0px;
+                bottom:5px;
+                left: 0px;
+                right: 0px;
+                z-index: -1;
+                background-image: linear-gradient(to bottom left, #5A98D0,#103F68 , #1F3F68 ,#103F68 , #1F3F68);
+            }
+            .smart-icon img{
+                
+                opacity: 1;
+                position: absolute;
+                bottom: 0px;
+                width: 50%;
+            }
+            .smart-des{
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                padding-right: 10px;
+                color:white;
+            }    
+            .app{
+                margin: 20px auto;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                grid-gap: 50px;
+               
+            }
+            .app>div{
+                flex: 1 1 350px;
+            }
+            .s-app{
+                position: relative;
+                border-radius: 10px;
+                
+            }
+            .s-app img{
+                border-radius: 10px;
+                width: 100%;
+            }
+            .app-des{
+                position: absolute;
+                top: 0px;
+                bottom:5px;
+                left: 0px;
+                right: 0px;
+                border-radius: 10px;
+                background: rgba(31, 63, 104, 0.7);
+                color: white;
+            }
+            .app-des h4{
+                margin: 10px;
+                padding-left: 20px;
+            }
+
+            .client{
+                border-top-left-radius: 200px;
+                background: #5A98D0 ;
+                width: 100%;
+                color: white;
+            }
+            .client-intro{
+               width: 70vw;
+               margin:50px auto;
+               display: flex;
+               flex-wrap: wrap;
+            }
+            .client-intro *{
+                flex: 1 0 200px;
+            }
+            .client-list{
+                width: 80vw;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: repeat(2, minmax(100px, 1fr));
+                grid-gap: 0px;
+                
+                
+            }
+            .client-list span{
+                text-align: center;
+                border-right: 1px solid white;
+                border-bottom: 1px solid white;
+                border-collapse: collapse;
+                padding: 30px;
+            }
+            .client-list span:last-child{
+                background-color: rgba(31, 63, 104, 0.3)
+            }
+            .client-footer{
+                margin-top:50px;
+                width: 90%;
+                border-top-right-radius: 200px;
+                background-color:#316099 ;
+            }
+            .client-footer .container{
+                padding: 0 30px;
+            }
+            .client-footer-des{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .client-footer-des div{
+                flex: 1 0 300px;
+            }
+            .work *{
+                width: 80%;
+               
+                 
+            }
+            .talk{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            .talk  a{
+                padding: 10px;
+                color:rgba(0, 0, 0, 0.75);
+                border-radius: 10px;
+                width: 100px;
+                background: #5A98D0;
+            }
+            .client-footer .container hr{
+                margin: 0 -30px;
+            }
+            .links{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .link{
+                flex: 1 1 250px;
+            }
+            .link-head{
+                display: flex;
+            }
+            .links ul{
+                width: 80%;
+                list-style: none;
+                padding: 0px;
+            }
+            .link li{
+                margin: 20px 0;
+            }
+            .container>p{
+                padding: 20px 0;
+            }
+            @media screen and (max-width: 700px) {
+                .nav{
+                    display: none;
+                }
+                
+            }
+            @media screen and (max-width: 800px) {
+                .client-list span:nth-child(even){
+                    border-right: 0px red;
+                }
+                .link{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                }
+            }
+            @media screen and (min-width: 800px) {
+              .client-list{
+                display: grid;
+                grid-template-columns: repeat(4, minmax(200px, 1fr));
+                grid-gap: 0px;
+              } 
+              .client-list span:nth-child(4), .client-list span:last-child{
+                  border-right: 0px solid black;
+              }
+              .client-list span:nth-child(n+5){
+                  border-bottom: 0px blue;
+              }
+                
+            }
+            @media screen and (max-width:400px){
+                .client-footer{
+                    width: 100%;
+                }
+                .client-footer hr{
+                    width: 100%;
+                }
+                
+            }
+        </style>
+    </head>
+    <body>
+        <img src="Asset/logo.svg" alt="logo" />
+        <div class="nav"><a href="">Home</a><a href="">Blog</a><a href="">Contact</a></div>
+        <div class="ham"><img src="asset/hamburger.svg" /> </div>
+        </div>
+        <div class="header-container">
+            <div class="header-content">
+                <h1>New Automation Tool for Your Home</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus tristique vulputate ultrices ut mauris tellus at. Posuere sollicitudin odio tellus elit</p>
+                <div class="our-project"><a href="" style="color: white;" >See Our Project</a></div>
+            </div>
+            <div class="header-content"> <img src="Asset/hero.svg" width="90%" alt="Hero"/> </div>
+        </div>
+        <div class="service-container">
+            <h2 class="digit">What we do to help our client grow in digital era,</h2>
+             <div class="service">
+                <div class="card">
+                    <img src="asset/business.svg" alt="business" />
+                    <h3>Make Your business To Be Better Famous In Internet</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                    <div class="more">
+                        <span style="color: #5A98D0;">Learn more </span>
+                        <img src="asset/arrow-right.svg"/>
+                    </div>
+                </div>   
+            
+                <div>
+                    <div class="card">
+                        <img src="asset/technology.svg" alt="technology" />
+                    <h3>Bring Technology To Your Comfrotable Home</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                    <div class="more">
+                        <span style="color: #5A98D0;">Learn more </span>
+                        <img src="asset/arrow-right.svg"/>
+                    </div>
+                    </div>
+                    <br>
+                    <div class="card">
+                        <img src="asset/digital.svg" alt="digital" />
+                        <h3>Build Your Digital Product That Suitable For Your Need</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                        <div class="more">
+                            <span style="color: #5A98D0;">Learn more </span>
+                            <img src="asset/arrow-right.svg"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project">
+            <div class="container">
+                <div class="project-head">
+                    <h1>Our Finished Project</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.t</p>
+                </div>
+                <div class="smart-home">
+                    <div class="bg">
+                        <img src="asset/smart-home-bg.jpg" />
+                    </div>
+                    <div class="smart-icon">
+                        <img src="asset/smart-home.svg" />
+                    </div>
+                    <div class="smart-des">
+                        <h3>Smart Home Installation</h3>
+                        <span>In Muarakana Housing Estate</span>
+                    </div>
+                </div>
+                <div class="app">
+                    <div class="s-app">
+                        <img src="asset/sparklite.png" />
+                        <div class="app-des">
+                            <h4>Sparklite App</h4>
+                            <h4>Masterpiece</h4>
+                        </div>
+                    </div>
+                    <div class="s-app">
+                        <img src="asset/car.png" />
+                        <div class="app-des">
+                            <h4>Car-Repitition App</h4>
+                            <h4>Board</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="client" >
+            <div class="client-intro"> 
+                <h1>Our Beloved Client </h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+            </div>
+            <div class="client-list">
+                <span>Logo Client 1</span>
+                <span>Logo Client 2</span>
+                <span>Logo Client 3</span>
+                <span>Logo Client 4</span>
+                <span>Logo Client 5</span>
+                <span>Logo Client 6</span>
+                <span>Logo Client 7</span>
+                <span>More Client</span>
+            </div>
+            <div class="client-footer">
+            <div class="container" >
+                <div class="client-footer-des">
+                    <div class="work">
+                        <h1>Intersted to work with our team?</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                    </div>
+                    <div class="talk">
+                        <a href=""> Lets Talk</a>
+                    </div>
+                </div>
+                <hr align="left" width="90%"/>
+                <div class="links">
+                    <div class="link">
+                        <div class="link-head">
+                            <img src="asset/logo-light.svg"> <h3>Afrianska</h3>
+                        </div>
+                        <ul >
+                            <li>A. Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+                            <li>T. +62-812-7313-4321</li>
+                            <li>E. hello.afrian@gmail.com</li>
+                        </ul>
+                    </div>
+                    <div class="link">
+                        <div class="link-head">
+                            <h3>About Us</h3>
+                        </div>
+                        <ul>
+                            <li>About</li>
+                            <li> What We Do</li>
+                            <li>Project</li>
+                            <li>How it Work With Us</li>
+                        </ul>
+                    </div>
+                    <div class="link">
+                        <div class="link-head">
+                            <h3>Follow Us </h3>
+                        </div>
+                        <ul>
+                            <li>Instagram</li>
+                            <li>Facebook</li>
+                            <li>LinkedIn</li>
+                            <li>Youtube</li>
+                        </ul>
+                    </div>
+                </div>
+                <p>20202020 © Afrianska. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
