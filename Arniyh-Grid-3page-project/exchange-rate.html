@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Exchange rate</title>
+        <link rel="stylesheet" href="css/exchange-style.css">
+        <script src="https://kit.fontawesome.com/07fd4e2b37.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <section class="change">
+            <div class="nav">
+                <img class="nav-logo" src="img/xe-logo.png" alt="logo">
+                <div class="nav-items">
+                    <a href="#">send money</a>
+                    <a href="#">business & api</a>
+                    <a href="#">tools</a>
+                    <a href="#">resources</a>
+                    <a href="#" class="btn app-btn"><i class="fa fa-mobile" aria-hidden="true"></i> get  the app</a>
+                    <a href="#" class="btn login-btn"><i class="fa fa-lock" aria-hidden="true"></i> log in</a>
+                </div>
+            </div>
+            <div class="head-text">
+                <p class="text">100,000 USD to NGN = 38,658,806.15 Nigerian Nairas</p>
+                <div class="head-icon">
+                    <p> <i class="fa fa-bell-o" aria-hidden="true"></i></p>
+                    <p> <i class="fa fa-envelope-o" aria-hidden="true"></i></p>
+                    <p class="fa zigzag">N</p>
+                </div>
+            </div>
+            <main class="main-container">
+            <div class="exchange">
+                <div><label for="amount">Amount</label><input type="text" value="100,000" id="amount"></div>
+                <div><label for="from">From</label>
+                    <select id="from">
+                        <option>USD <br>US dollar</option>
+                    </select>
+                </div>
+                <p class="swap"><i class="fa fa-exchange" aria-hidden="true"></i></p>
+                <div><label for="to">To</label>
+                    <select id="to">
+                        <option>NGN <br>Nigerian naira</option>
+                    </select>
+                </div>
+                <a href="#" class="xchange-btn"> > </a>
+            </div> 
+            <div class="content">
+                <p class="convert"><span>US Dollar</span> to <span>Nigerian Naira</span> Conversion</p>
+                <div class="result">
+                    <p class="in">100,000 USD = </p>
+                    <p class="out">38,658,806.15 <span>NGN</span></p>
+                    <p class="n-u">1 NGN = 0.00258673 USD</p>
+                    <p class="u-n">1 USD = 386.588 NGN</p>
+                </div>
+                <p class="update">Latest update: 2020-06-17 12:09 UTC</p>
+            </div>
+            <p class="footer"> All figures are live <span>mid-market</span> rates, which are not available to consumers and are for informational purpose only.</p>
+            </main>
+        </section>
+    </body>
+
+</html>

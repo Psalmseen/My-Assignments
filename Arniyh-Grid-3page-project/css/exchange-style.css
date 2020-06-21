@@ -1,0 +1,198 @@
+*  {
+    box-sizing: border-box;
+}
+body{
+    background: #000;
+    color: #ddd;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+/*=================
+    TYPOGRAPHY
+=================*/
+a{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+.nav-items{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.text{
+    font-size: 1.2rem;
+}
+
+/*=================
+    LAYOUT
+=================*/
+.change{
+    background: rgba(0, 0, 225, .5);
+    background-image: url(../img/blue-abstract.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode:multiply;
+    display: grid;
+    grid-template-columns: minmax(2em, auto) auto minmax(2em, auto);
+    width:80%;
+}
+.change > * {
+    grid-column: 2/ -2;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    font-size: .75em;
+    letter-spacing: .5px;
+}
+.nav-logo{
+    height: 40px;
+}
+.nav-items{
+    margin-left: auto;
+}
+.nav-items a{
+    margin:0 10px;
+}
+.btn{
+   border-radius:1.25em;
+   word-spacing: 1px;
+   padding:.25em 1em ; 
+   align-self: center;
+   justify-self: center;
+}
+.app-btn{
+    background: skyblue;
+    color: black;
+}
+.login-btn{
+    text-transform: capitalize;
+    color: skyblue;
+    border: 2px solid skyblue;
+}
+/* header*/
+.head-text{
+    display:flex;
+    align-items: center;
+
+    padding-bottom:0;
+    margin: 0;
+}
+.text{
+    font-size: 2rem;
+    margin: 0%;
+    font-weight: 700;
+    
+}
+.head-icon{
+    display: flex;
+    margin-left: auto;
+    
+
+}
+.head-icon .fa{
+    margin-left: 15px;
+    background: rgba(3, 3, 83, .8);
+    padding: .5em;
+    border-radius: 50%;
+}
+.fa-bell-o,
+.zigzag{
+    transform: rotate(25deg);
+}
+/* main*/
+.main-container{
+    background-color: rgba(0, 0, 100, .7);
+    margin-top: 0;
+    padding: 2em;
+    border-radius: 20px 20px 0 0 ;
+}
+.exchange{
+    display:grid;
+    grid-template-columns: repeat(2, auto) 30px auto 70px;
+    height: 80px;
+    grid-gap: 1em;
+    
+}
+input,
+select{
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    padding-left: 25px;
+    height: calc(100% - 2em);
+    border-radius: 10px;
+}
+label{
+    margin-left: .95em;
+    font-size: 1em;
+}
+.swap{
+    margin: 0;
+    padding-bottom: 10px;
+    align-self: end;
+    justify-self: center;
+    
+}
+.fa-exchange{
+    font-size: 2.5em;
+    justify-self: end;
+    
+}
+.xchange-btn{
+    padding:0 15px;
+    border-radius: 10px;
+    font-weight: 900;
+    justify-self: center;
+    align-self: center;
+    margin: 0;
+    font-size: 2.5em;
+    color: #000;
+    background: #fff119;
+    cursor: pointer;
+}
+/*content*/
+.content{
+    display: grid;
+    grid-template-columns:repeat(3, auto);
+    align-items:end
+}
+.convert,
+.update{
+    letter-spacing: 1px;
+    font-size: .85rem;
+}
+.convert span{
+    text-decoration: underline;
+}
+.result{
+    text-align: center;
+    font-weight: 900;
+}
+.in{
+    font-weight: 400;
+    font-size: 2em;
+    margin-bottom: 0;
+}
+.out{
+    font-size: 3em;
+    margin:0;
+}
+.out span{
+    font-size: 1rem;
+}
+n-u,
+u-n{
+    font-size: 2em;
+    margin: 0;
+}
+.footer{
+    text-align: center;
+}
+.footer span{
+    text-decoration: underline;
+}
