@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+   <html>
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <script src="https://kit.fontawesome.com/07fd4e2b37.js" crossorigin="anonymous"></script>
+            <title>UI challenge day 1</title>
+            <style>
+               *{
+                  box-sizing:border-box;
+                  }
+               body{
+                  margin:0;
+                  padding:0;
+                  display:grid;
+                  place-content: center;
+                  text-align:center;
+                  color:#343f68;
+                  background:#f2f3fb;
+                  font-size:1rem;
+               }
+               a{
+                  text-decoration:none;
+               }
+               .container{
+               display:grid;
+               grid-template-columns: 0em 1fr 0em;
+               grid-gap: 1em;
+               grid-template-areas: 
+                     ". main ."
+                     ". foot ."
+                     ". cont ."
+                     ". can .";
+               
+               }
+               main{
+                  grid-area:main;
+                  border-radius:10px;
+                  margin-top:1em;
+                  display:grid;
+                  box-shadow:10px 10px 30px -25px #343f68,-5px -5px 5px  #fff;
+               }
+               .logo{
+                display:grid;
+                place-content:center;
+                color: #f2f3fb;
+                width:3em;
+                height:3em;
+                padding:1em;
+                border-radius:50%;
+                margin:1em auto;
+               }
+               .credit{
+                  background:#fc7474 ;
+               }
+               .order{
+                  background:#7e90f8;
+               }
+               .gift{
+                  background:#fcab74;
+               }
+               main div{
+                  text-transform: uppercase;
+                  display: grid;
+                  place-content: center;
+                  margin: 1em;
+                  padding: auto;
+                  width: 30vw;
+                  height: 30vw;
+                  justify-self: center;
+                  border-radius: 20px;
+                  font-size: 4vw;
+               }
+               main div:hover,
+               main div:focus,
+               .active{
+                  box-shadow: 10px 10px 30px -25px #343f68,-5px -5px 5px  #fff;
+               }
+               main div > *{
+                  margin: 0;
+                  padding: 0;
+                  line-height: 1;
+               }
+               .foot-text{
+                  grid-area: foot;
+                  border-radius:20px;
+                  padding: 2rem;
+                  box-shadow: inset 10px 10px 50px -40px #343f68, inset -5px -5px 5px #fff;
+                  font-weight: bold;
+                  letter-spacing: 1px;
+                  line-height: 1.5em;
+               }
+               .btn-cont{
+                  background:#7e90f8;
+                  color: #f2f3fb;
+                  grid-area: cont;
+               }
+               .btn-can{
+                  grid-area: can;
+               }
+               .btn{
+                  display: inline-block;
+                  padding: 1em;
+                  font-size: 1.5rem;
+                  margin-bottom: 1em ;
+                  border-radius: 2em;
+                  box-shadow: 10px 10px 30px -15px #343f68,-5px -5px 5px  #fff;
+               }
+               .foot-text a{
+                  color: #7e90f8;
+                  display: block;
+               }
+               .foot-text a:hover{
+                  color: #fc8c94;
+               }
+               .btn:hover,
+               .btn:focus{
+                  box-shadow: unset; 
+               }
+               @media (min-width: 600px){
+                  body{
+                     height: 100vh;
+                  }
+                  .container{
+                     grid-template-columns:0em repeat(2, minmax(200px, 1fr)) 0em ;
+                     grid-template-areas: 
+                           ". main  main ."
+                           ". foot  foot ."
+                           ". cont  can .";
+                  }
+                  .container > *{
+                     align-self: start;
+                  }
+                  main{
+                     grid-template-columns: minmax(1em, auto) repeat(3, minmax(100px, 200px)) minmax(1em, auto);
+
+                  }
+                  main div:first-child {
+                     grid-column: 2;
+                  }
+                  main div{
+                     width: 8em;
+                     height: 8em;
+                     font-size: 1rem;
+                  }
+                  .foot-text a{
+                     display: unset;
+                  }
+               }
+            </style>
+        </head>
+        <body>
+           <section class="container">
+              <main>
+                 <div>
+                    <p class="logo credit"><i class="fa fa-credit-card-alt" aria-hidden="true"></i></p>
+                    <p>credit cards</p>
+                 </div>
+                 <div class="active ">
+                    <p class="logo gift"> <i class="fa fa-gift" aria-hidden="true"></i></p>
+                    <p>gift cards</p>
+                 </div>
+                 <div>
+                    <p class="logo order"><i class="fa fa-shopping-cart" aria-hidden="true"></i></p>
+                    <p>orders</p>
+                 </div>
+              </main>
+              
+                 <p class="foot-text"> stay on top of your order status, deals, new messages and more.
+                    <a href="#"> Enable notification</a>
+                 </p>
+              
+              <a href="#" class="btn btn-cont"> continue</a>
+              <a href="#" class="btn btn-can"> cancel</a>
+              
+           </section>
+        </body>
+   </html>
