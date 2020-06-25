@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>UI | Day 2</title>
+        <script src="https://kit.fontawesome.com/07fd4e2b37.js" crossorigin="anonymous"></script>
+        <style>
+           *{
+               box-sizing: border-box;
+           } 
+           body{
+               margin: 0;
+               padding: 0;
+               background: #151D2D;
+               color:#51A1E4;
+               display: grid;
+               place-content: center;
+               min-height: 100vh;
+               font-size: 1.2rem;
+           }
+           .container{
+               padding: 2em;
+               background: #505176;
+               margin: 3em;
+               border-radius: 10px;
+               display: grid;
+               grid-template-columns:90px repeat(2, minmax(100px, 150px));
+               grid-template-areas: 
+                "img  p  ....."
+                ".... foot foot";
+
+           }
+           img{
+               width: 3em;
+               height: 3em;
+               border-radius: 50%;
+               box-sizing: content-box;
+               padding: .5em;
+               background:#151D2D;
+               grid-area: img;
+           }
+           p{
+               grid-area: p;
+               opacity: .7;
+           }
+           .foot{
+               grid-area: foot;
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               border-top: 1px solid #696371;
+               
+           }
+           .quote{
+               display: flex;
+               justify-content:space-between;
+           }
+           .quote i{
+               padding: 1em;
+               opacity: .7;
+           }
+           .btn{
+               text-decoration: none;
+               padding: .25em 1.2em;
+               background: #1D83DA;
+               border-radius: 2em;
+               color: #ddd;
+           }
+           .btn:focus,
+           .btn:hover{
+               background:#51A1E4;
+           }
+        </style>
+    </head>
+    <body>
+        <section class="container">
+                <img src="photo/face.jpg">
+                <p>What's happening?</p>
+            <div class="foot">
+                <div class="quote">
+                    <i class="fa fa-picture-o" aria-hidden="true"></i>
+                    <i class="fa fa-video-camera" aria-hidden="true"></i>
+                    <i class="fa fa-smile-o" aria-hidden="true"></i>
+                </div>
+                <a href="#" class="btn">post</a>
+            </div>
+        </section>
+    </body>
+</html>
