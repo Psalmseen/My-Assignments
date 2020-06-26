@@ -32,13 +32,15 @@
                 ".... foot foot";
 
            }
-           img{
+           .img{
                width: 3em;
                height: 3em;
+               border: 7px solid #151D2D;
+               background-image: url("photo/face.jpg");
+               background-size: cover;
+               background-position: center;
                border-radius: 50%;
                box-sizing: content-box;
-               padding: .5em;
-               background:#151D2D;
                grid-area: img;
            }
            p{
@@ -51,6 +53,7 @@
                justify-content: space-between;
                align-items: center;
                border-top: 1px solid #696371;
+               padding-top: 1em;
                
            }
            .quote{
@@ -76,7 +79,7 @@
     </head>
     <body>
         <section class="container">
-                <img src="photo/face.jpg">
+                <div class="img"></div>
                 <p>What's happening?</p>
             <div class="foot">
                 <div class="quote">
