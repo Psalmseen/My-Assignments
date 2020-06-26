@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" >
+        <title>Share article</title>
+        <script src="https://kit.fontawesome.com/07fd4e2b37.js" crossorigin="anonymous"></script>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                margin: 0;
+                padding: 0;
+                display: grid;
+                place-content: center;
+                background: #636364;
+                color: #343434;
+                min-height: 100vh;
+                grid-template-columns: minmax(.11em,auto) minmax(0, 700px) minmax(.11em, auto);
+            }
+            .container{
+                grid-column: 2;
+                background: #EBEBEB;
+                padding:1em;
+                border-radius: 10px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+
+            }
+            .exit{
+                position: relative;
+                text-align: right;
+                font-weight: lighter;
+                
+            }
+            main{
+                flex: 1 1 300px;
+            }
+            ul{
+                display: flex;
+                list-style: none;
+                text-align: center;
+                justify-content: center;
+                padding: 0;
+                margin: 2.5em 0 ;
+            }
+            .af{
+                padding:.4em 1.1em;
+                background: green;
+                border-radius:5px;
+                margin:0 .75em ;
+            }
+            .af a{
+                text-decoration: none;
+                color: #EBEBEB; 
+            }
+            .af:hover,
+            .af:focus{
+                background-color: #22aaaa;
+            }
+            .fa{
+                padding-right: .4rem;
+            }
+            .facebook{
+                background: #1FA3F2;
+            }
+            .twitter{
+                background: #70BCEA;
+            }
+            .reddit{
+                background-color:#0B0D0D ;
+            }
+            .share  span{
+                font-weight: bolder;
+                font-size: 900;
+            }
+            .close{
+                display: inline-block;
+                text-decoration: none;
+                color: #D97C53;
+                margin-top: 1.5em;
+            }
+            .close:hover,
+            .close:focus{
+                color: #22aaaa;
+            }
+        </style>
+    </head>
+    <body>
+        <section class="container">
+            <p class="exit">X</p>
+            <main>
+                <h1>Share this article</h1>
+                <p>If you like this article share it with your friends.<br>They will thank you later</p>
+                <ul>
+                    <li class="af facebook"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</a></li>
+                    <li class="af twitter"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>Twitter</a></li>
+                    <li class="af reddit"><a href="#"><i class="fa fa-reddit-alien" aria-hidden="true"></i>Reddit</a></li>
+                </ul>
+                <p class="share"><span>4.5k</span> Shares</p>
+                <a href="#" class="close"> Close this window</a>
+            </main>
+        </section>
+    </body>
+</html>
