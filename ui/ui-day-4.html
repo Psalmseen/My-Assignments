@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>UI Design Community</title>
+        <script src="https://kit.fontawesome.com/07fd4e2b37.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                margin: 0;
+                padding: 0px;
+                font-size: 1rem;
+                font-family: "roboto", sans-serif;
+                background: #F8F8FB;
+                color: #111;
+            }
+            body > *{
+                padding: 15px;
+            }
+            ul{
+                list-style: none;
+            }
+            a{
+                text-decoration: none;
+                color:inherit
+            }
+            /*=====================
+                NAVIGATIONS
+            ======================*/
+            .navi{
+                position: fixed;
+                display: flex;
+                margin: 0;
+                padding: 0;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                background: #F8F8FB;
+                border: 2px red;
+                
+                box-shadow: 0px 20px 20px -30px #999;
+            }
+            .logo{
+                max-width: 50vw;
+                padding: 1em;
+            }
+            .logo2{
+                max-width: 80%;
+            }
+            .nav-list{
+                position: fixed;
+                left: 30%;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                background: #F8F8FB;
+                display: grid;
+                place-content: center;
+                font-size: 1.5em;
+                margin: 0;
+                text-align: center;
+                transform: translateX(80%);
+                transition: all 0.5s;
+                opacity: 0;
+                
+            }
+            .open-list{
+                transform: translateX(0);
+                opacity: 1;
+            }
+            .nav-list *{
+                margin: .7em;
+            }
+            .close-nav{
+                position:absolute;
+                right: 15px;
+                text-align: center;
+                margin: 0;
+                padding:5px;
+                background: #A6A9B8;
+                border-radius: 50%;
+                cursor: pointer;
+            } 
+            .open-navi{
+                font-size: 2em;
+                font-weight: 900;
+                cursor: pointer;
+                padding: 0 50px;
+                margin: 0;
+                border: none;
+                background:transparent;
+            }
+            /*=====================
+                      MAIN
+            ======================*/
+            .main{
+                text-align: center;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+            .body-logo{
+                padding-top: 0em;
+                width: 100%;
+            }
+            form{
+                display: grid;
+            }
+            input,
+            .iv{
+                border: 1px solid #A6A9B8;
+                border-radius: 5px;
+                padding:1em;
+            }
+            .iv{
+                text-transform: uppercase;
+                background: #6A376C;
+                color: #F8F8FB;
+                margin-top: 1em;
+                letter-spacing: 1px;
+            }
+            /*=====================
+                    FOOTER
+            ======================*/
+            footer{
+                display: grid;
+                justify-content: center;
+                text-align: center;
+                color: #1115;
+            }
+            footer >*{
+                margin: 1.5em 0;
+                
+            }
+            .tnc{
+                color: #1119;
+            }
+            @media (min-width:850px){
+                .close-nav,
+                .open-navi,
+                .logo2{
+                    display: none;
+                }
+                .nav-list{
+                    position:initial;
+                    transform:unset;
+                    display:flex;
+                    margin: 0em;
+                    padding: 0;
+                    justify-content: space-evenly;
+                    opacity: 1;
+                    color: #1119;
+                }
+                .nav-list > *{
+                    margin: 0;
+                    padding: 0;
+                }
+                form,
+                footer{
+                display: grid;
+                grid-gap: 1em;
+                grid-template-columns: repeat(3, 1fr);
+                }
+                input{
+                    grid-column: 1/ span 2;
+                }
+                .iv{
+                    margin: 0;
+                }
+                footer{
+                    padding: 0;
+                }
+                .social{
+                    display: flex;
+                    justify-content:flex-end;
+                    
+                }
+                .social-link{
+                    padding-right: 1em;
+                }
+                .tnc{
+                    justify-self: left;
+                    padding-left: 1em;
+                }
+            }
+           
+        </style>
+    </head>
+    <body>
+        <nav class="navi">   
+            <img src="photo/logo-1.jpeg" alt="company logo" class="logo" />
+            <button class="open-navi">&#9776</button>
+            <ul class="nav-list">
+                <i class="close-nav fa fa-times" aria-hidden="true"></i>
+                <img src="photo/logo-1.jpeg" alt="company logo" class="logo2">
+                <li class="nav-list- items"><a href="#" class="nav-link">Designs</a></li>
+                <li class="nav-list- items"><a href="#" class="nav-link">About</a></li>
+                <li class="nav-list- items"><a href="#" class="nav-link">License</a></li>
+                <li class="nav-list- items"><a href="#" class="nav-link">Blog</a></li>
+                <li class="nav-list- items"><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <section class="main">
+            <img src="photo/logo-2.jpeg" alt="Ui logo" class="body-logo">
+            <div class="content">
+                <h1>UI Design Daily Community</h1>
+                <p>Want to link with other UI designers or developers? join our slack channel to chat about design tools, how to get started, UI design trends or random things like banana </p>
+            </div>
+            <form action="#" method="POST">
+                <input type="text" placeholder="Enter your E-mail here">
+                <button class="iv">invite me !</button>
+            </form>
+        </section>
+        <footer>
+            <div class="tnc">
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <a href="#" class="fine-print">&copyUIDesignDaily2020</a>
+            <ul class="social">
+                <li class="social-list"><a href="#" class="social-link"><i class="fab fa-twitter"></i></a></li>
+                <li class="social-list"><a href="#" class="social-link"><i class="fab fa-behance"></i></a></li>
+                <li class="social-list"><a href="#" class="social-link"><i class="fab fa-dribbble"></i></a></li>
+                <li class="social-list"><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
+                <li class="social-list"><a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a></li>
+            </ul>
+        </footer>
+        <script src="javascript/index.js" type="text/javascript" ></script>
+    </body>
+</html>    
