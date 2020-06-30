@@ -16,6 +16,11 @@
                 font-family: "roboto", sans-serif;
                 background: #F8F8FB;
                 color: #111;
+                min-height: 100vh;
+                border: 2px solid red;
+                display: flex;
+                flex-direction: column;
+
             }
             body > *{
                 padding: 15px;
@@ -43,7 +48,7 @@
                 box-shadow: 0px 20px 20px -30px #999;
             }
             .logo{
-                max-width: 50vw;
+                max-width: 150px;
                 padding: 1em;
             }
             .logo2{
@@ -101,8 +106,9 @@
                 margin: 0 auto;
             }
             .body-logo{
-                padding-top: 0em;
-                width: 100%;
+                padding-top: 3em;
+                width: 50%;
+                
             }
             form{
                 display: grid;
@@ -129,6 +135,8 @@
                 justify-content: center;
                 text-align: center;
                 color: #1115;
+                position: relative;
+                margin-top: auto;
             }
             footer >*{
                 margin: 1.5em 0;
@@ -145,14 +153,17 @@
                     margin: 0;
                     
                 }
-                .social-link{
+            .social-link{
                     padding-right: 1em;
-                }
+            }
+            
+            
             @media (min-width:850px){
                 .close-nav,
                 .open-navi,
                 .logo2{
                     display: none;
+                    
                 }
                 .logo{
                     max-width: 10%;
@@ -215,7 +226,7 @@
             </ul>
         </nav>
         <section class="main">
-            <img src="photo/logo-2.jpeg" alt="Ui logo" class="body-logo">
+            <img src="photo/slack-logo.svg" alt="Ui logo" class="body-logo">
             <div class="content">
                 <h1>UI Design Daily Community</h1>
                 <p>Want to link with other UI designers or developers? join our slack channel to chat about design tools, how to get started, UI design trends or random things like banana </p>
