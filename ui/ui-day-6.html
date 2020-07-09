@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>UI Design Daily | menu</title>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                margin: 0;
+                padding: 0;
+                background-color: #ECEDF4;
+                display: grid;
+                place-content: center;
+                min-height: 100vh;
+                color:#7C7C86;
+                
+                
+                color: #9798A2 ;
+                color:#B4B4BB;
+                color:#848484;
+                color:#1C1C1E;
+            }
+            ul{
+                list-style: none;
+                padding-left: 0;
+            }
+            content{
+                background: #fff;
+                padding: 2em 1em 1em 1em;
+                border-radius: 20px;
+                display:grid;
+                max-width: 80vw;
+            }
+            .first{
+                margin-right: 0em;
+                max-width: 100%;
+            }
+            .start{
+                color:#848484 ;
+                border-bottom: 1px solid #848484;
+                margin-bottom: 0;
+                padding-bottom: 1em;
+            }
+            main{
+                display: flex;
+                flex-wrap: wrap;
+                max-width: 700px;
+            }
+            main div{
+                flex: 1 1 250px;
+                max-width: 70vw;
+                padding-left: 1em;
+                margin-right:0.5em ;
+            }
+            .ic{
+                background: #1C1C1E;
+                color: #eee;
+            }
+            .last{
+                background-color:#ECEDF4;
+                padding: 2em;
+                border-radius: 20px;
+                justify-self: start;
+                max-width: 70vw;
+            }
+            li{
+                padding-bottom: 1em;
+            }
+            a{
+                color: inherit;
+                
+            }
+            .last h2{
+                font-size: 1.2rem;
+            }
+            @media (min-width: 800px){
+                content{
+                    grid-template-columns: repeat(2, auto);
+                    grid-gap: 2em;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <content>
+            <section class="first">
+                <h1 class="start">Get Started</h1>
+                <main>
+                    <div class="ic">
+                        <h3>Integrated checkout </h3>
+                        <p>Payment page that lets you collect payments quickly. </p>
+                    </div>
+                    <div>
+                        <h3>LIbraries</h3>
+                        <p>Find a guide to integrate payment and others APIs.</p>
+                    </div>
+                    <div>
+                        <h3>Plugins</h3>
+                        <p>Create and run your online business without writing code yourself.</p>
+                    </div>
+                    <div>
+                        <h3>Code sample</h3>
+                        <p>Sample that help you learn the common integration patterns.</p>
+                    </div>
+                </main>
+            </section>
+            <section class="last">
+                <h2>Documentation</h2>
+                <p>Start integration with our easy to follow steps.</p>
+                <ul>
+                    <li>Set up a subscription> </li>
+                    <li>Integration checklist></li>
+                    <li>Upgrade account details></li>
+                    <li>Subscription with add-ons></li>
+                    <li>Customization and branding></li>
+                </ul>
+                <a href="#">View our courses</a>
+            </section>
+        </content>
+    </body>
+</html>

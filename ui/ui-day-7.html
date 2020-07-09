@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <style>
+            *{
+                box-sizing: border-box;
+               
+            }
+            body{
+                margin: 0;
+                padding: 1em;
+                background:#596361;
+                color:#1D1813;
+                font-size: 1rem;
+                line-height:1.5;
+                min-height: 100vh;
+                display: grid;
+                place-content: center;
+            }
+            .container{
+                background: #306060;
+                padding:2em;
+                border-radius: 20px;
+                display: grid;
+                grid-row-gap: 2em;
+            }
+            .creator,
+            .account,
+            .post{
+                background-color:#E2E9E8;
+                padding: 1em;
+                border-radius: 1em;
+            }
+            
+            .creator > div{
+                display: flex;
+                align-items: center;
+            }
+            .creator>div> div>p{
+                margin: 0;
+            }
+            .btn{
+                text-decoration: none;
+                color: inherit;
+                margin-left: auto;
+                border: 2px solid #A6ABAC;
+                border-radius: 5px;
+                padding: .25em 1em;
+                margin-right: 1em;
+                font-weight: 700;
+            }
+            h3{
+                margin: 0;
+                padding: 0;
+                
+            }
+            .p{
+                width: 10vw;
+                height: 10vw;
+                max-width: 80px;
+                max-height: 80px;
+                border-radius: 50%;
+                margin-top: 0;
+                margin-right: .5rem;
+            }
+            .white{
+                background: #fff;
+                color:#4f5b5e ;
+            }
+            .grey{
+                 color: #fff;
+                 background :#4f5b5e ;
+                 border: none;
+            }
+            .text{
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+                flex-wrap: wrap;
+            }
+            .post{
+                text-align: center;
+            }
+            .post-link{
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+            .post-link a{
+                margin: 0.5em;
+            }
+            /*========================
+                    PICTURES
+            ========================*/
+            .p1{
+                background: url("photo/img-1.png");
+                background-size: cover;
+                background-position: center;
+            }
+            .p2{
+                background: url("photo/img-2.png");
+                background-size: cover;
+                background-position: center;
+            }
+            .p3{
+                background: url("photo/img-3.png");
+                background-size: cover;
+                background-position: center;
+            }
+            .p4{
+                background: url("photo/img-4.png");
+                background-size: cover;
+                background-position: center;
+            }
+            .p5{
+                background: url("photo/img-5.png");
+                background-size: cover;
+                background-position: center;
+            }
+            @media (min-width: 800px){
+                .container{
+                    display: grid;
+                    grid-gap: 1em;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-areas:
+                        "create account"
+                        "create post" ;
+                }
+                .creator{
+                grid-area: create;
+                max-width: 500px;
+            }
+            .account{
+                grid-area: account;
+                align-self: center;
+                max-width: 500px;
+            }
+            .post{
+                grid-area: post;
+                align-self: center;
+                max-width: 500px;
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <section class="container">
+            <main class="creator">
+                <h2>Trending creators</h2>
+                <div>
+                    <p class="p p1"></p>
+                    <div>
+                        <h3>Amy Adams</h3>
+                        <p>2,455 followers</p>
+                    </div>
+                    <a href="#"class="btn white">Join</a>
+                </div>
+                <div>
+                    <p class="p p2"></p>
+                    <div>
+                        <h3>Mae Pittman</h3>
+                        <p>3,974 followers</p>
+                    </div>
+                    <a href="#"class="btn grey">Join</a>
+                </div>
+                <div>
+                    <p class="p p3"></p>
+                    <div>
+                        <h3>William Williamson</h3>
+                        <p>2,423 followers</p>
+                    </div>
+                    <a href="#"class="btn white">Join</a>
+                </div>
+                <div>
+                    <p class="p p4"></p>
+                    <div>
+                        <h3>Marie Poole</h3>
+                        <p>2,447 followers</p>
+                    </div>
+                    <a href="#"class="btn white">Join</a>
+                </div>
+                <div>
+                    <p class="p p5"></p>
+                    <div>
+                        <h3>Polly Murray</h3>
+                        <p>1,443 followers</p>
+                    </div>
+                    <a href="#"class="btn white">Join</a>
+                </div>
+            </main>
+            <div class="account">
+                <h3>Premium Account</h3>
+                <div class="text">
+                    <p>The best experience with monthly coins.</p>
+                    <a href="#" class="btn grey">Try Now</a>
+                </div>
+            </div>
+            <div class="post">
+                <h3>Post</h3>
+                <p>The best posts from all. Come here to see new posts rising and be part of the conversation.</p>
+                <div class="post-link">
+                    <a href="#" class="btn grey">Create Post</a>
+                    <a href="#" class="btn white"> Create Community</a>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

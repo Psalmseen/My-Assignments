@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Page Insight</title>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                margin: 0;
+                padding: 0;
+                display: grid;
+                min-height: 100vh;
+                place-content: center;
+                background:#F3F3F2;
+            }
+            a{
+                text-decoration: none;
+                color: inherit;
+            }
+            .wrapper{
+                background: #FFF ;
+                border-radius: 10px;
+                padding: 2em;
+                min-width: 80vw;
+                color:  #2F3030;
+                max-width: 1000px;
+               
+            }
+            content{    
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+            aside{
+                background: url(photo/face.jpg);
+                background-size: cover;
+                background-position: top;
+                border-radius: 50%;
+                height: 10vw;
+                width: 10vw;
+                min-width: 40px;
+                min-height: 40px;
+                max-width: 80px;
+                max-height: 80px;
+                margin-right: .5em;
+            }
+            content a{
+                margin-left: auto;
+                background:#2F3030;
+                color: #fff;
+                padding: .25em 1em;
+            }
+            content a:hover{
+                background-color: #10c2aa;
+            }
+            content div > *{
+                margin: 0em;
+            }
+            .nav{
+                display: flex;
+                flex-wrap: wrap;
+                list-style: none;
+                border-top: 1px solid #939794;
+                padding-top: 1em;
+                padding-left:0;
+            }
+            li{
+                padding-right: 1em;
+                color:#939794 ;
+            }
+            li:hover{
+                color: #2F3030;
+                font-weight: bold;
+            }
+            
+            .in{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .turn{
+                display: inline-block;
+                transform: rotate(90deg) scale(1.1);
+                font-weight: 800;
+            }
+            main{
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                grid-gap: 1em;
+
+            }
+            .like{
+                border: 2px solid #939794;
+                display: flex;
+                flex-direction:column;
+                border-radius: 10px;
+                padding: 0 1em;
+                
+            }
+            .like:hover,
+            .like:focus{
+                color: #fff;
+                background: #2F3030;
+                border: none;
+            }
+            .title,
+            .text{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .title >*,
+            .text>*{
+                margin:0.5em 0;
+            }
+            .title p{
+                color: #10c2aa;
+                text-align: center;
+            }
+            .title p::before{
+                content: "";
+                width: 0px;
+                height: 0px;
+                display: inline-block;
+                margin-bottom: .1em;
+                margin-right: .1em;
+                border-bottom: 8px solid  #10c2aa;
+                border-right: 4px solid transparent;
+                border-left: 4px solid transparent; 
+                
+            }
+            .text a{
+                color:#fff;
+                opacity: .7;
+            }
+            content p span{
+                display: inline-block;
+                padding: 0 .3em;
+                font-weight:bold;
+                transform: scale(1.5) translateY(-.25em);
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <content>
+                <aside></aside>
+                <div>
+                    <h2>Leo Bailey</h2>
+                    <p>@leo_bai<span>.</span>Entertainment</p>
+                </div>
+                <a href="#">Edit</a>
+            </content>
+            <ul class="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="in">
+                <h3>Insights</h3>
+                <p>May 29 - jun 24 <span class="turn">></span></p>
+            </div>
+            <main>
+                <div class="like">
+                    <div class="title">
+                        <h4>People Reached</h4>
+                        <p>7%</p>
+                    </div>
+                    <div class="text">
+                        <h3>1,090</h3>
+                        <a href="#">More info ></a>
+                    </div>
+                </div>
+                <div class="like">
+                    <div class="title">
+                        <h4>Post Engagements</h4>
+                        <p>25%</p>
+                    </div>
+                    <div class="text">
+                        <h3>305</h3>
+                        <a href="#">More info ></a>
+                    </div>
+                </div>
+                <div class="like">
+                    <div class="title">
+                        <h4>Page Likes</h4>
+                        <p>18%</p>
+                    </div>
+                    <div class="text">
+                        <h3>13</h3>
+                        <a href="#">More info ></a>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

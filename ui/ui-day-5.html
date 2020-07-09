@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>UI Design | project page</title>
+        <style> 
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                margin: 0;
+                padding: 20px;
+                color: #252535;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+            }
+            a{
+                text-decoration: none;
+                color: inherit;
+            }
+            li{
+                list-style: none;
+            }
+            
+            /*================
+                primary Nav
+            =================*/
+            .pry-nav{
+               display: flex; 
+               justify-content: space-between;
+               align-items: center;
+               flex-wrap: wrap;
+            }
+            .pry-nav *{
+                display: flex;
+                text-transform: capitalize;
+            }
+            .nav-items{
+                padding: 0;
+                margin: 0;
+            }
+            .nav-items li{
+                padding-right: .8em;
+            }
+            .pry-nav p{
+                margin-top:.5em;
+                margin-bottom: .5em;
+            }
+            .upgrade{
+                padding: .15em 1em;
+                border: 1px solid black;
+                border-radius: 1em;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            .jg{
+                background-color:#E3A1AA;
+                border-radius: 50%;
+                padding: .25em;
+                margin: 0;
+                margin-left:1em ;
+            }
+            /*================
+                side Nav
+            =================*/
+            .side-nav{
+                background-color: #242531;
+                color: #A0A1AB;
+                position: fixed;
+                padding:10px 20px;
+                margin-top:10px;
+                left: 0;
+                border-radius:0px  30px 30px 0;
+                bottom: 0;
+                top:0;
+                min-height:90vh;
+                max-height: 100vh;
+                width: 300px;
+                max-width: 90vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                opacity: 0;
+                transform: translateX(-280px);
+                transition: all .5s;
+                
+            }
+            .open-side{
+                opacity: 1;
+                transform: translateX(0);
+            }
+            .open-nav,
+            .close-nav{
+                cursor: pointer;
+                margin: 0em;
+                align-self: start;
+            }
+            .close-nav{
+                position: absolute;
+                right: 1em;
+                font-size: 2em;
+                font-weight: bold;
+                margin-top: 0em;
+            }
+            .side-items{
+                padding: 0;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            .mrk::before{
+                content: "M";
+                background:#58AEFF;
+                border: none;
+                box-shadow: 0px 20px 40px  -20px #58AEFF;
+            }
+            .fl::before{
+                content: "FL";
+                background:#FF8158;
+                border: none;
+                box-shadow: 0px 20px 40px  -20px #FF8158;
+            }
+            .board::before{
+                content: "bd";
+                background:#FFB658;
+                border: none;
+                box-shadow: 0px 20px 40px  -20px #FFB658;
+            }
+            .uidd::before{
+                content: "Ud";
+                background:#B058FF;
+                border: none;
+                box-shadow: 0px 20px 40px  -20px #B058FF;
+            }
+            .top::before{
+                content: "T";
+                background:#9AD045;
+                border: none;
+                box-shadow: 0px 20px 40px  -20px #9AD045;
+            }
+            .baf::before{
+                content: "BF";
+                background:#F55697;
+                border: none;
+                box-shadow: 0px 20px 40px  -20px #F55697;
+            }
+            
+            .side-items  a::before,
+            .active::after{
+                content: "";
+                display: inline-block;
+                margin:0.2em .2em;
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+            } 
+            .active::after{
+                background-color: red;
+                margin:.5em .2em ;
+            }
+            .side-items li{
+                margin:0 0 .5em 0;
+            }
+            .prolink{
+                color: #4781BB;
+                padding: 1em;
+            }
+            /*text-area*/
+            .text-area{
+                background: #3A3C53;
+                padding: 1em;
+                margin: 1.2em;
+                border-radius: 10px;
+            }
+            .text-area h3{
+                color: #fff;
+                margin-top: .5rem;
+            }
+            .free{
+                background: #fff;
+                display: inline-block;
+                width: 100%;
+                color: #3A3C53;
+                font-weight: 900;
+                text-align: center;
+                padding: .8em;
+                border-radius: 10px;
+            }
+            /*================
+                Main
+            =================*/
+            .content{
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                text-align: center;
+                font-size: .5em;
+
+            }
+            main a::before{
+                content: "+";
+                display: grid;
+                place-content: center;
+                border: 1px solid black;
+                text-align: center;
+                font-size: 3em;
+                padding:0;
+                color: #fff;
+                font-weight: 900;
+                width: 100px;
+                height: 100px;
+                margin:0 .5em;
+                border-radius: 20px;
+            }
+            .add::before{
+                color: #252535;
+            }
+            /*================
+               Footer
+            =================*/
+            footer{
+                margin-top: auto;
+                margin-left: auto;
+            }
+            footer > *{
+                margin: .5em;
+                
+            }
+            .qm{
+                border: 1px solid #A0A1AB;
+                font-size: .8rem;
+                font-weight: 900;
+                display: inline-grid;
+                place-content: center;
+                width: 1.5rem;
+                height: 1.5rem;
+                border-radius: 50%;
+                margin: 0;
+            }
+            @media (min-width: 750px){
+                .close-nav,
+                .open-nav{
+                    display: none;
+                }
+                body{
+                    display: grid;
+                    align-items:flex-start;
+                    grid-template-rows: 2em 1em;
+                    grid-template-columns: 320px auto ;
+                    grid-template-areas: 
+                            "side nav"
+                            "side main"
+                            "side foot";
+                }
+                .side-nav{
+                    grid-area: side;
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+                .pry-nav{
+                    grid-area: nav;
+                }
+                main{
+                    grid-area: main;
+                }
+                footer{
+                    grid-area: foot;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="pry-nav">
+            <ul class="nav-items">
+                <li><a href="#">home</a></li>
+                <li><a class="active" href="#">project</a></li>
+                <li><a  href="#">inbox</a></li>
+                <li><a href="#">terms</a></li>
+            </ul>
+            <div>
+                <p class="upgrade">Upgrade</p>
+                <p class="jg">JG</p>
+            </div>
+        </nav>
+        <p class="open-nav">&#9776</p>
+        <section class="side-nav ">
+        <div>
+                <p class="close-nav">&times;</p>
+                <p>PROJECTS</p>
+                <ul class="side-items">
+                    <li><a href="" class="board">Boardme development</a></li>
+                    <li><a href="" class="fl">Feature lists</a></li>
+                    <li><a href="" class="mrk">Marketing</a></li>
+                    <li><a href="" class="uidd">UIDD development</a></li>
+                    <li><a href="" class="top">Topics</a></li>
+                    <li><a href="" class="baf">Bugs and fixes</a></li>
+                </ul>
+                <a href="#" class="prolink"> View all > </a>
+            </div>
+            <div>
+                <p>TEAMS</p>
+                <div class="text-area">
+                    <h3>Need to form a team?</h3>
+                    <p>Try our 30 days trial and see what you can achieve together.</p>
+                    <a href="#" class="free">Try it free</a>
+                </div>
+            </div>
+        </section>
+        <main>
+            <h3>Projects</h3>
+            <div class="content">
+                <p><a href="" class="mrk"></a>Marketing</p>
+                <p><a href="" class="fl"></a>Feature lists</p>
+                <p><a href="" class="board"></a>Boardme development</p>
+                <p><a href="" class="uidd"></a>UIDD development</p>
+                <p><a href="" class="top"></a>Topics</p>
+                <p><a href="" class="baf"></a>Bug and fixes</p>
+                <p><a href="#" class="add"></a>Add a project</p>
+            </div>
+        </main>
+        <footer>
+            <a href="#">...</a>
+            <a href="#">Privacy</a>
+            <a href="#" class="qm">?</a>
+        </footer>
+        <script type="text/javascript" src="javascript/day-5.js"></script>
+    </body>
+</html>
