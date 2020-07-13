@@ -15,6 +15,7 @@
                 place-content: center;
                 background-color:#DBDEE5;
                 padding: 2em;
+                font-family: lato;
             }
             a{
                 text-decoration: none;
@@ -28,32 +29,131 @@
                 background-color:#4A4A5A;
                 padding: 1em;
                 border-radius: 20px;
+                color: #EEE;
+                min-height: 80vh;
+                max-width: 1000px;
+                line-height: 1.6;
             }
-             wrapper
-            #F5A623 create
-            #FFFFFF text
-            #4A90E2 search
-            #666574 search area bg
+            .nav{
+                position: fixed;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                left: 30%;
+                right: 0;
+                bottom: 1em;
+                top: 1em;
+                border-radius: 1em 0 0 1em;
+                text-align: center;
+                background-color: #666574;
+                transform: translateX(100%);
+                opacity: 0;
+                transition: all 0.25s;
+            }
+            .nav-opened{
+                transform: translateX(0);
+                opacity: 1;
+            }
+            .nav >*{
+                padding: 1em;
+                color: #FFF;
+                transition: all .25s;
+            }
+            .nav li:hover{
+                transform: scale(1.2);
+                color: turquoise;
+                font-weight: 900;
+            }
+            .close{
+                position: absolute;
+                top: 0;
+                right: 1em;
+            }
+            .open{
+                position: absolute;
+                right: 13%;
+            }
+            .text{
+                text-align: center;
+                width: 90%;
+                margin: 0 auto;
+            }
+            form{
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                border: 1px solid #4A90E2;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 4em;
+            }
+            .search{
+                flex: 1 0 50px;
+                margin: 0;
+                padding: 1em;
+                border: none;
+                color: #EEE;
+                background-color: #4A90E2;
+            }
+            .s-text{
+                flex: 4 0 190px;
+                margin: 0;
+                padding: 1em ;
+                background-color: #666574;
+                color: #EEE;
+                border: none;
+            }
+            .s-text:hover,
+            .search:hover,
+            .s-text:focus,
+            .search:focus,
+            .search:active{
+                border: none;
+                opacity: .8;
+            }
+            .cr8{
+                background-color:#F5A623;
+                padding:.5em  1em;
+                border-radius: .5em;
+            }
+            @media (min-width:750px){
+                .close,
+                .open{
+                    display: none;
+                }
+                .nav{
+                    position: unset;
+                    opacity: 1;
+                    transform: translateX(0);
+                    flex-direction: row;
+                    background-color: unset;
+                    justify-content: flex-end;
+
+                }
+            }
         </style>
     </head>
     <body>
         <div class="wrapper">
-            <ul class="nav">
+            <p class="open">&#9776</p>
+            <ul class="nav ">
+                <p class="close">&#967;</p>
                 <li><a href="#" class="nav-link">Account</a></li>
                 <li><a href="#" class="nav-link">My list</a></li>
                 <li><a href="#" class="nav-link">Manage Trips</a></li>
                 <li><a href="#" class="nav-link">Support</a></li>
                 <li><a href="#" class="nav-link">Log In</a></li>
-                <li><a href="#" class="nav-link">Create Account</a></li>
+                <li><a href="#" class="nav-link cr8">Create Account</a></li>
             </ul>
             <main class="text">
                 <h3>Explore the World</h3>
                 <p>One of the key to reaching your goal is to eliminate any escape route. It is tempting to retreat to safety and comfort when challenges and difficulties arise. to avoid turning around and abandoning your goals, you must make going forward more compelling than going back.</p>
             </main>
             <form action="#" method="POST">
-                <input type="search" placeholder="Enter country, city or address.">
-                <input type="button" value="Search">
+                <input class="s-text" type="search" value="Enter country, city or address">
+                <button class="search" type="submit">Search</button>
             </form>
         </div>
+        <script src="javascript/day-9.js"></script>
     </body>
 </html>
