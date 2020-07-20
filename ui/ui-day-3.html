@@ -9,7 +9,7 @@
             *{
                 box-sizing: border-box;
             }
-            body{
+            .body{
                 margin: 0;
                 padding: 0;
                 display: grid;
@@ -87,9 +87,38 @@
             .close:focus{
                 color: #22aaaa;
             }
+            .day{
+                  text-transform: uppercase;
+                  font-weight: 900;
+                  font-size: 2em;
+                  letter-spacing: 2px;
+                  text-decoration: underline;
+                  align-self: top;
+                  text-align: center;
+               }
+               .page{
+                  align-self: flex-end;
+                  margin-top: auto;
+                  bottom: 0;
+                  display: flex;
+                  width: 100%;
+                  justify-content: space-between;
+                  align-items: center;
+               }
+               .btn-page{
+                  width: 6em;
+                  max-width: 45%;
+                  margin: 1em;
+                  background: #111;
+                  color: white;
+                  text-align: center;
+                  font-size: 1.2em;
+               }
         </style>
     </head>
     <body>
+        <p class="day">day 3</p>
+        <div class="body">
         <section class="container">
             <p class="exit">X</p>
             <main>
@@ -104,5 +133,10 @@
                 <a href="#" class="close"> Close this window</a>
             </main>
         </section>
+    </div>
+    <div class="page">
+        <a href="https://psalmseen.github.io/My-Assignments/ui/ui-day-2.html" class="af btn-page">Prev</a>
+        <a href="https://psalmseen.github.io/My-Assignments/ui/ui-day-3.html" class="af btn-page">Next</a>
+     </div>
     </body>
 </html>

@@ -7,7 +7,7 @@
             *{
                 box-sizing: border-box;
             }
-            body{
+            .body{
                 margin: 0;
                 padding: 0;
                 background-color: #ECEDF4;
@@ -81,9 +81,52 @@
                     grid-gap: 2em;
                 }
             }
+            .day{
+                  text-transform: uppercase;
+                  font-weight: 900;
+                  font-size: 2em;
+                  letter-spacing: 2px;
+                  text-decoration: underline;
+                  align-self: top;
+                  text-align: center;
+               }
+               .page{
+                  align-self: flex-end;
+                  margin-top: auto;
+                  bottom: 0;
+                  display: flex;
+                  width: 100%;
+                  justify-content: space-between;
+                  align-items: center;
+               }
+               .btn{
+                  display: inline-block;
+                  padding: 0.5em 1em;
+                  font-size: 1.5rem;
+                  margin-bottom: 1em ;
+                  border-radius: 2em;
+                  text-decoration: none;
+                  box-shadow: 10px 10px 30px -15px #343f68,-5px -5px 5px  #fff;
+               }
+               .btn-page{
+                  width: 6em;
+                  max-width: 45%;
+                  margin: 1em;
+                  background:#ECEDF4;
+                  text-align: center;
+                  font-size: 1.2em;
+               }
+               
+               .btn:hover,
+               .btn:focus{
+                  box-shadow: unset; 
+                  
+               }
         </style>
     </head>
     <body>
+        <p class="day">day 6</p>
+        <div class="body">
         <content>
             <section class="first">
                 <h1 class="start">Get Started</h1>
@@ -119,5 +162,10 @@
                 <a href="#">View our courses</a>
             </section>
         </content>
+        </div>
+        <div class="page">
+            <a href="https://psalmseen.github.io/My-Assignments/ui/ui-day-5.html" class="btn  btn-page">Prev</a>
+            <a href="https://psalmseen.github.io/My-Assignments/ui/ui-day-7.html" class="btn btn-page">Next</a>
+         </div>
     </body>
 </html>

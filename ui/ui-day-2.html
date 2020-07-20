@@ -9,7 +9,7 @@
            *{
                box-sizing: border-box;
            } 
-           body{
+           .body{
                margin: 0;
                padding: 0;
                background: #151D2D;
@@ -75,9 +75,36 @@
            .btn:hover{
                background:#51A1E4;
            }
+           .day{
+                  text-transform: uppercase;
+                  font-weight: 900;
+                  font-size: 2em;
+                  letter-spacing: 2px;
+                  text-decoration: underline;
+                  align-self: top;
+                  text-align: center;
+               }
+               .page{
+                  align-self: flex-end;
+                  margin-top: auto;
+                  bottom: 0;
+                  display: flex;
+                  width: 100%;
+                  justify-content: space-between;
+                  align-items: center;
+               }
+               .btn-page{
+                  width: 6em;
+                  max-width: 45%;
+                  margin: 1em;
+                  text-align: center;
+                  font-size: 1.2em;
+               }
         </style>
     </head>
     <body>
+        <p class="day">day 2</p>
+        <div class="body">
         <section class="container">
                 <div class="img"></div>
                 <p>What's happening?</p>
@@ -90,5 +117,10 @@
                 <a href="#" class="btn">post</a>
             </div>
         </section>
+    </div>
+    <div class="page">
+        <a href="https://psalmseen.github.io/My-Assignments/ui/ui-day-1.html" class="btn btn-page">Prev</a>
+        <a href="https://psalmseen.github.io/My-Assignments/ui/ui-day-3.html" class="btn btn-page">Next</a>
+     </div>
     </body>
 </html>

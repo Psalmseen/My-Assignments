@@ -7,7 +7,7 @@
             *{
                 box-sizing: border-box;
             }
-            body{
+            .body{
                 margin: 0;
                 padding: 0;
                 min-height: 100vh;
@@ -131,9 +131,36 @@
 
                 }
             }
+            .day{
+                  text-transform: uppercase;
+                  font-weight: 900;
+                  font-size: 2em;
+                  letter-spacing: 2px;
+                  text-decoration: underline;
+                  align-self: top;
+                  text-align: center;
+               }
+               .page{
+                  align-self: flex-end;
+                  margin-top: auto;
+                  bottom: 0;
+                  display: flex;
+                  width: 100%;
+                  justify-content: space-between;
+                  align-items: center;
+               }
+               .btn-page{
+                  width: 6em;
+                  max-width: 45%;
+                  margin: 1em;
+                  text-align: center;
+                  font-size: 1.2em;
+               }
         </style>
     </head>
     <body>
+        <p class="day">day 9</p>
+    <div class="body">
         <div class="wrapper">
             <p class="open">&#9776</p>
             <ul class="nav ">
@@ -154,6 +181,11 @@
                 <button class="search" type="submit">Search</button>
             </form>
         </div>
+    </div>
+    <div class="page">
+        <a href="https://psalmseen.github.io/My-Assignments/ui/ui-day-8.html" class="cr8  btn-page">Prev</a>
+        <a href="https://psalmseen.github.io/My-Assignments/ui/ui-day-9.html" class="cr8 btn-page">Next</a>
+     </div>
         <script src="javascript/day-9.js"></script>
     </body>
 </html>

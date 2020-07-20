@@ -8,20 +8,23 @@
                *{
                   box-sizing:border-box;
                   }
-               body{
+               .body{
                   margin:0;
                   padding:0;
                   display:grid;
-                  place-content: center;
+                  justify-content: center;
                   text-align:center;
                   color:#343f68;
                   background:#f2f3fb;
                   font-size:1rem;
+                  min-height: 100vh;
                }
+               
                a{
                   text-decoration:none;
                }
                .container{
+                  align-self: center;
                display:grid;
                grid-template-columns: 0em 1fr 0em;
                grid-gap: 1em;
@@ -118,7 +121,7 @@
                }
                @media (min-width: 600px){
                   body{
-                     height: 100vh;
+                     min-height: 100vh;
                   }
                   .container{
                      grid-template-columns:0em repeat(2, minmax(200px, 1fr)) 0em ;
@@ -146,9 +149,38 @@
                      display: unset;
                   }
                }
+               .day{
+                  text-transform: uppercase;
+                  font-weight: 900;
+                  font-size: 2em;
+                  letter-spacing: 2px;
+                  text-decoration: underline;
+                  align-self: top;
+                  text-align: center;
+               }
+               .page{
+                  align-self: flex-end;
+                  margin-top: auto;
+                  bottom: 0;
+                  display: flex;
+                  width: 100%;
+                  justify-content: space-between;
+                  align-items: center;
+               }
+               .btn-page{
+                  width: 6em;
+                  max-width: 45%;
+                  margin: 1em;
+                  text-align: center;
+                  font-size: 1.2em;
+                  background:#fcab74;
+               }
             </style>
         </head>
+       
         <body>
+         <p class="day">day 1</p>
+         <div class="body">
            <section class="container">
               <main>
                  <div>
@@ -171,7 +203,11 @@
               
               <a href="#" class="btn btn-cont"> continue</a>
               <a href="#" class="btn btn-can"> cancel</a>
-              
            </section>
+         </div>
+         <div class="page">
+            <a href="https://psalmseen.github.io/My-Assignments/ui/ui-day-1.html" class="btn btn-page">Prev</a>
+            <a href="https://psalmseen.github.io/My-Assignments/ui/ui-day-2.html" class="btn btn-page">Next</a>
+         </div>
         </body>
    </html>

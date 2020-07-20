@@ -7,7 +7,7 @@
             *{
                 box-sizing: border-box;
             }
-            body{
+            .body{
                 margin: 0;
                 padding: 20px;
                 color: #252535;
@@ -237,12 +237,25 @@
                 border-radius: 50%;
                 margin: 0;
             }
+            .page{
+                  align-self: flex-end;
+                  margin-top: auto;
+                  margin-left: auto;
+                  bottom: 0;
+                  display: flex;
+                  width: 100%;
+                  justify-content: space-between;
+                  align-items: center;
+               }
             @media (min-width: 750px){
                 .close-nav,
                 .open-nav{
                     display: none;
                 }
-                body{
+                .page{
+                    width:calc(100% - 300px);
+                }
+                .body{
                     display: grid;
                     align-items:flex-start;
                     grid-template-rows: 2em 1em;
@@ -266,10 +279,31 @@
                 footer{
                     grid-area: foot;
                 }
+                
             }
+            .day{
+                  text-transform: uppercase;
+                  font-weight: 900;
+                  font-size: 2em;
+                  letter-spacing: 2px;
+                  text-decoration: underline;
+                  align-self: top;
+                  text-align: center;
+               }
+               
+               .btn-page{
+                  width: 6em;
+                  max-width: 45%;
+                  margin: 1em;
+                  background: #4781BB;
+                  text-align: center;
+                  font-size: 1.2em;
+               }
         </style>
     </head>
     <body>
+        <p class="day">day 5</p>
+        <div class="body">
         <nav class="pry-nav">
             <ul class="nav-items">
                 <li><a href="#">home</a></li>
@@ -323,6 +357,11 @@
             <a href="#">Privacy</a>
             <a href="#" class="qm">?</a>
         </footer>
+        </div>
+        <div class="page">
+            <a href="https://psalmseen.github.io/My-Assignments/ui/ui-day-4.html" class="upgrade  btn-page">Prev</a>
+            <a href="https://psalmseen.github.io/My-Assignments/ui/ui-day-6.html" class="upgrade btn-page">Next</a>
+         </div>
         <script type="text/javascript" src="javascript/day-5.js"></script>
     </body>
 </html>
