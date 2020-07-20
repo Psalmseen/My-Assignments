@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Homepage</title>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                margin: 0;
+                padding: 0;
+                min-height: 100vh;
+                display: grid;
+                place-content: center;
+                text-align: center;
+                background: #465465;
+                font-size: 1rem;
+            }
+            .container{
+                background: #eee;
+                padding: 2em;
+                border-radius: 1em;
+            }
+            .logo{
+                text-transform: uppercase;
+                font-size: 1.5em;
+                margin-top: 0;
+            }
+            label{
+                display: grid;
+                padding: 1em;
+                justify-content: center;
+            }
+            select,
+            input{
+                padding: .7em;
+                text-align: center;
+                appearance: none;
+                border-radius: 5px;
+                border: 1px solid #aaa;
+
+            }
+            .container p:last-child{
+                margin-bottom: 0;
+            }
+            .err{
+                color: #da0909;
+                margin: 0;
+                padding: 0em;
+            }
+            
+            .pp{
+                display:none;
+                text-align: center;
+                border-radius: 1em;
+                height: 12em;
+                width: 12em;
+                transition: all 0.75s;
+                background-position:center ;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            .p1{
+                display: block;
+                background-image: url(photo/sk-solar.jpg);
+            }
+            .p2{
+                display: block;
+                background-image: url(photo/lemi-solar.jpg);
+            }
+            .p3{
+                display: block;
+                background-image: url(photo/lumi-solar.jpg);
+            }
+            .p4{
+                display: block;
+                background-image: url(photo/27-tv.jpg);
+            }
+            .p5{
+                display: block;
+                background-image: url(photo/32-tv.jpg);
+            }
+            .p6{
+                display: block;
+                background-image: url(photo/deep-freezer.jpg);
+            }
+            .p7{
+                display: block;
+                background-image: url(photo/gas-cooker.jpg);
+            }
+        </style>
+        <script>
+            function removePic(){
+                var pics = document.querySelector(".pp");
+                pics.classList.remove("p1");
+                pics.classList.remove("p2");
+                pics.classList.remove("p3");
+                pics.classList.remove("p4");
+                pics.classList.remove("p5");
+                pics.classList.remove("p6");
+                pics.classList.remove("p7");
+            }
+            function pic(){
+                var product = document.getElementById("product").value;
+                var pics = document.querySelector(".pp");
+                switch(product){
+                case "Sunking solar pack":  pics.classList.add("p1"); break;
+                case "Lemi solar pack":pics.classList.add("p2"); break;
+                case "Luminous solar pack": pics.classList.add("p3"); break;
+                case '27" LCD Television':pics.classList.add("p4"); break;
+                case '32" LCD Television':  pics.classList.add("p5"); break;
+                case "Deep freezer": pics.classList.add("p6"); break;
+                case "Gas cooker": pics.classList.add("p7"); break;
+                default:;
+            }
+            }
+            function payment(){
+                var product = document.getElementById("product").value;
+                var month = document.getElementById("month").value;
+                month = parseInt(month);
+                var price;
+            switch(product){
+                case "Sunking solar pack": price=20000; document.getElementById("err").innerHTML=""; break;
+                case "Lemi solar pack": price=20000; document.getElementById("err").innerHTML=""; break;
+                case "Luminous solar pack": price=20000; document.getElementById("err").innerHTML=""; break;
+                case '27" LCD Television': price=20000; document.getElementById("err").innerHTML=""; break;
+                case '32" LCD Television': price=20000; document.getElementById("err").innerHTML=""; break;
+                case "Deep freezer": price=20000; document.getElementById("err").innerHTML=""; break;
+                case "Gas cooker": price=20000; document.getElementById("err").innerHTML=""; break;
+                default:document.getElementById("err").innerHTML="Please select a product";
+            }
+    
+            var amount = (price + (month * 0.05 *price))/month;
+             amount = Math.floor(amount) + 1;
+             
+             if( isNaN(month) ){
+                document.getElementById("errm").innerHTML="Please fill the number of month(s)";
+            }
+            else{
+                document.getElementById("errm").innerHTML="";
+            }
+             if( isNaN(amount) ){
+                document.getElementById("amount").innerHTML = "";
+            }
+             else{
+                document.getElementById("amount").innerHTML = "You will pay #"+ amount + " per month" ;
+             }
+            
+            }
+        </script>
+    </head>
+    <body>
+        
+        <div class="container">
+            <p class="logo"> mobile pouch limited</p>
+            <form action=>
+                <label for="product">Select Product<p class="pp"></p></label>
+                <select id="product" onfocus="removePic()" onfocusout="pic()">
+                    <option> Sunking solar pack </option>
+                    <option> Lemi solar pack </option>
+                    <option> Luminous solar pack </option>
+                    <option> 27" LCD Television </option>
+                    <option> 32" LCD Television </option>
+                    <option> Deep freezer</option>
+                    <option> Gas cooker </option>
+                    <option selected> -- Select a product -- </option>
+                </select>
+                <p id="err" class="err"></p>
+                <label for="month">Enter the number of month(s)</label>
+                <input id="month" type="text"   onfocusout="payment()">
+                <p class="err" id="errm"></p>
+            </form>
+            
+            <p id="amount"></p>
+        </div>
+    </body>
+</html>
