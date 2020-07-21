@@ -149,7 +149,7 @@
                     }
             
                     var amount = (price + (month * 0.05 *price))/month;
-                    amount = Math.floor(amount) + 1;
+                    amount = Math.round(amount);
                     
                     if( isNaN(month) ){
                         document.getElementById("errm").innerHTML="Please fill the number of month(s)";
