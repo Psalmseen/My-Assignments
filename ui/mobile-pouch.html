@@ -4,6 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Homepage</title>
         <style>
+            @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;900&display=swap');
             *{
                 box-sizing: border-box;
                 max-width: 100vw;
@@ -17,6 +18,7 @@
                 text-align: center;
                 background: #465465;
                 font-size: 1rem;
+                font-family: 'Roboto Slab', serif;
             }
             .container{
                 background: #eee;
@@ -30,13 +32,14 @@
             }
             label{
                 display: grid;
-                padding: 1em;
+                padding:1em;
                 justify-content: center;
             }
             select,
             input{
                 padding: .7em;
                 text-align: center;
+                text-transform: capitalize;
                 appearance: none;
                 border-radius: 5px;
                 border: 1px solid #aaa;
@@ -90,6 +93,15 @@
                 display: block;
                 background-image: url(photo/gas-cooker.jpg);
             }
+            .prod-desc{
+                margin: 0;
+                padding: 0;
+                font-weight: bold;
+                font-size: 1.1rem;
+                color: rgba(70, 84, 101, 0.8);
+                padding-bottom: 1em;
+                text-transform: capitalize;
+            }
         </style>
         <script>
             function removePic(){
@@ -101,18 +113,20 @@
                 pics.classList.remove("p5");
                 pics.classList.remove("p6");
                 pics.classList.remove("p7");
+                var desc = document.querySelector(".prod-desc").innerHTML="";
             }
             function pic(){
                 var product = document.getElementById("product").value;
                 var pics = document.querySelector(".pp");
+                var desc = document.querySelector(".prod-desc");
                 switch(product){
-                case "Sunking solar pack":  pics.classList.add("p1"); break;
-                case "Lemi solar pack":pics.classList.add("p2"); break;
-                case "Luminous solar pack": pics.classList.add("p3"); break;
-                case '27" LCD Television':pics.classList.add("p4"); break;
-                case '32" LCD Television':  pics.classList.add("p5"); break;
-                case "Deep freezer": pics.classList.add("p6"); break;
-                case "Gas cooker": pics.classList.add("p7"); break;
+                case "Sunking solar pack":  pics.classList.add("p1"); desc.innerHTML = "Sunking solar set"; break;
+                case "Lemi solar pack":pics.classList.add("p2"); desc.innerHTML = "Lemi solar set"; break;
+                case "Luminous solar pack": pics.classList.add("p3"); desc.innerHTML = "900 VA Luminous Home Solar Syatem with capacity to power both AC & DC appliances."; break;
+                case '43" LCD Television':pics.classList.add("p4"); desc.innerHTML = 'Startimes 43" TV with inbuilt Startimes decoder and DC & AC power units.'; break;
+                case '32" LCD Television':  pics.classList.add("p5"); desc.innerHTML = 'Startimes 32" TV with inbuilt Startimes decoder and DC & AC power units.'; break;
+                case "Deep freezer": pics.classList.add("p6"); desc.innerHTML = "Haier Thermocool 100 Liters deep freezer."; break;
+                case "Gas cooker": pics.classList.add("p7"); desc.innerHTML = "Haier Thermocool all gas 4 burner"; break;
                 default:;
             }
             }
@@ -121,33 +135,38 @@
                 var month = document.getElementById("month").value;
                 month = parseInt(month);
                 var price;
-            switch(product){
-                case "Sunking solar pack": price=20000; document.getElementById("err").innerHTML=""; break;
-                case "Lemi solar pack": price=20000; document.getElementById("err").innerHTML=""; break;
-                case "Luminous solar pack": price=20000; document.getElementById("err").innerHTML=""; break;
-                case '27" LCD Television': price=20000; document.getElementById("err").innerHTML=""; break;
-                case '32" LCD Television': price=20000; document.getElementById("err").innerHTML=""; break;
-                case "Deep freezer": price=20000; document.getElementById("err").innerHTML=""; break;
-                case "Gas cooker": price=20000; document.getElementById("err").innerHTML=""; break;
-                default:document.getElementById("err").innerHTML="Please select a product";
-            }
-    
-            var amount = (price + (month * 0.05 *price))/month;
-             amount = Math.floor(amount) + 1;
-             
-             if( isNaN(month) ){
-                document.getElementById("errm").innerHTML="Please fill the number of month(s)";
-            }
-            else{
-                document.getElementById("errm").innerHTML="";
-            }
-             if( isNaN(amount) ){
-                document.getElementById("amount").innerHTML = "";
-            }
-             else{
-                document.getElementById("amount").innerHTML = "You will pay #"+ amount + " per month" ;
-             }
+                if(month > 0){
+                    switch(product){
+                        case "Sunking solar pack": price=34000; document.getElementById("err").innerHTML=""; break;
+                        case "Lemi solar pack": price=34000; document.getElementById("err").innerHTML=""; break;
+                        case "Luminous solar pack": price=210000; document.getElementById("err").innerHTML=""; break;
+                        case '43" LCD Television': price=100000; document.getElementById("err").innerHTML=""; break;
+                        case '32" LCD Television': price=70000; document.getElementById("err").innerHTML=""; break;
+                        case "Deep freezer": price=86000; document.getElementById("err").innerHTML=""; break;
+                        case "Gas cooker": price=70000; document.getElementById("err").innerHTML=""; break;
+                        default:document.getElementById("err").innerHTML="Please select a product";
+                    }
             
+                    var amount = (price + (month * 0.05 *price))/month;
+                    amount = Math.floor(amount) + 1;
+                    
+                    if( isNaN(month) ){
+                        document.getElementById("errm").innerHTML="Please fill the number of month(s)";
+                    }
+                    else{
+                        document.getElementById("errm").innerHTML="";
+                    }
+                    if( isNaN(amount) ){
+                        document.getElementById("amount").innerHTML = "";
+                    }
+                    else{
+                        document.getElementById("amount").innerHTML = "You will pay #"+ amount + " per month" ;
+                    }
+                }   
+                else{
+                    document.getElementById("errm").innerHTML="Please enter a number greater than 0";
+                    document.getElementById("amount").innerHTML = "";
+                }
             }
         </script>
     </head>
@@ -157,11 +176,12 @@
             <p class="logo"> mobile pouch limited</p>
             <form action=>
                 <label>Select Product<p class="pp"></p></label>
+                <p class="prod-desc"></p>
                 <select id="product" onfocus="removePic()" onfocusout="pic()">
                     <option> Sunking solar pack </option>
                     <option> Lemi solar pack </option>
                     <option> Luminous solar pack </option>
-                    <option> 27" LCD Television </option>
+                    <option> 43" LCD Television </option>
                     <option> 32" LCD Television </option>
                     <option> Deep freezer</option>
                     <option> Gas cooker </option>
@@ -169,7 +189,7 @@
                 </select>
                 <p id="err" class="err"></p>
                 <label for="month">Enter the number of month(s)</label>
-                <input id="month" type="text"   onfocusout="payment()">
+                <input id="month" type="number"   onfocusout="payment()">
                 <p class="err" id="errm"></p>
             </form>
             
