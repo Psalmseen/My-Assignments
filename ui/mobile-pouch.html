@@ -136,7 +136,7 @@
                 var month = document.getElementById("month").value;
                 month = parseInt(month);
                 var price;
-                if(month > 0){
+                if(month > 1){
                     switch(product){
                         case "Sunking solar pack": price=34000; document.getElementById("err").innerHTML=""; break;
                         case "Lemi solar pack": price=34000; document.getElementById("err").innerHTML=""; break;
@@ -164,6 +164,10 @@
                         document.getElementById("amount").innerHTML = "You will pay #"+ amount + " per month" ;
                     }
                 }   
+                else if (month == 0 || month == 1){
+                    alert(" enter a number greater than 1 or  click on add to cart and checkout to make full payment  now");
+                    document.getElementById("amount").innerHTML = "";
+                }
                 else{
                     document.getElementById("errm").innerHTML="Please enter a number greater than 0";
                     document.getElementById("amount").innerHTML = "";
