@@ -15,11 +15,11 @@
                 padding: 0 0.5em;
                 margin: 0;
                 background-color: #fff;
+                display: grid;
             }
             ul{
                 list-style: none;
                 padding: 0;
-            
             }
             a{
                 text-decoration: none;
@@ -35,7 +35,6 @@
             .main-nav{
                 display: flex;
                 justify-content: space-evenly;
-                
             }
             .main-nav li{
                 padding-right: 1em;
@@ -70,6 +69,79 @@
             .sub-cta{
                 display: flex;
             }
+            .sub-cta li{
+                padding-right: 1em;
+            }
+            .content-wrapper{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .hero{
+                
+            }
+            .cite-img{
+                width: 3em;
+                height:3em;
+                border-radius: 50%;
+                background-position:center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .cite{
+                display: flex;
+                align-items: center;
+            }
+            .cite-auth{
+                margin: .5em;
+            }
+            .cite-1{
+                background-image: url("photo/img-4.png");
+                background-position: top right;
+            }
+            .cite-2{
+                background-image: url("photo/img-3.png");
+                background-position: top right;
+            }
+            .cite-3{
+                background-image: url("photo/img-2.png");
+            }
+            .cite-4{
+                background-image: url("photo/img-6.png");
+            }
+            .article{
+                display: flex;
+                padding: 1em;
+                flex-direction: column;
+                justify-content: space-evenly;
+            }
+            .article-content{
+                display: flex;
+                
+            }
+            .article-img{
+                width: 7em;
+                margin: 1em;
+                justify-self: center;
+            }
+            .article-text{
+                display: flex;
+                flex-direction: column;
+                justify-self: center;
+                height: 7em;
+                margin: auto 0;
+                justify-content: space-between;
+                width: 12em;
+            }
+            .hero-desc{
+                width: 80%;
+            }
+            .hero-img{
+                width: 100%;
+            }
+            .article-text h3{
+                margin: 0;
+            }
         </style>
     </head>
     <body>
@@ -103,53 +175,55 @@
                     </g>
                   </svg>                  
             </nav>
-            <div class="hero">
-                <h1>Productivity</h1>
-                <img src="photo/ui-day-10-hero.png" alt="hero">
-                <h3>Little things do make a difference </h3>
-                <p>Why do you want to motivate yourself? Actually just answerring that question fully can be one of the better ways to get your daily motivation.</p>
-                <div class="cite">
-                    <img class="cite-img" src="photo/img-4.png">
-                    <p class="cite-auth">Kathryn Shelton</p>
+            <main class="content-wrapper">
+                <div class="hero">
+                    <h1>Productivity</h1>
+                    <img class="hero-img" src="photo/ui-day-10-hero.png" alt="hero">
+                    <h3>Little things do make a difference </h3>
+                    <p class="hero-desc">Why do you want to motivate yourself? Actually just answerring that question fully can be one of the better ways to get your daily motivation.</p>
+                    <div class="cite">
+                        <div class="cite-img cite-1"></div>
+                        <p class="cite-auth">Kathryn Shelton</p>
+                    </div>
+
+                </div>  
+                <article class="article">
+                <h4>Recent Articles</h4>
+                <div class="article-content">
+                    <img src="photo/ui-day-10-article (1).png" alt="article" class="article-img">
+                    <div class="article-text">
+                        <h3>Common Symbols and their meaning</h3>
+                        <div class="cite">
+                            <div class="cite-img cite-2"></div>
+                            <p class="cite-auth">Sussie Russell</p>
+                        </div>
+                    </div>
                 </div>
 
-            </div>  
-            <article class="article">
-               <h4>Recent Articles</h4>
-               <div class="article-content">
-                <img src="photo/ui-day-10-article (1).png" alt="article" class="article-img">
-                  <div class="article-text">
-                      <h3>Common Symbols and their meaning</h3>
-                      <div class="cite">
-                        <img class="cite-img" src="photo/img-3.png">
-                          <p class="cite-auth">Sussie Russell</p>
-                    </div>
-                  </div>
-               </div>
 
-
-               <div class="article-content">
-                <img src="photo/ui-day-10-article (2).png" alt="article" class="article-img">
-                  <div class="article-text">
-                      <h3>success steps for your business</h3>
-                      <div class="cite">
-                          <img class="cite-img" src="photo/img-2.png">
-                          <p class="cite-auth">Connor Parsons</p>
+                <div class="article-content">
+                    <img src="photo/ui-day-10-article (2).png" alt="article" class="article-img">
+                    <div class="article-text">
+                        <h3>success steps for your business</h3>
+                        <div class="cite">
+                            <div class="cite-img cite-3"></div>
+                            <p class="cite-auth">Connor Parsons</p>
+                        </div>
                     </div>
-                  </div>
-               </div>
+                </div>
 
-               <div class="article-content">
-                <img src="photo/ui-day-10-article (3).png" alt="article" class="article-img">
-                  <div class="article-text">
-                      <h3>the strength of your belief</h3>
-                      <div class="cite">
-                        <img class="cite-img" src="photo/img-6.png">
-                          <p class="cite-auth">Jonathan Yates</p>
+                <div class="article-content">
+                    <img src="photo/ui-day-10-article (3).png" alt="article" class="article-img">
+                    <div class="article-text">
+                        <h3>the strength of your belief</h3>
+                        <div class="cite">
+                            <div class="cite-img cite-4"></div>
+                            <p class="cite-auth">Jonathan Yates</p>
+                        </div>
                     </div>
-                  </div>
-               </div>
-            </article>  
+                </div>
+                </article> 
+            </main> 
         </div>
     </body>
 </html>
