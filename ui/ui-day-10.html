@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>UI Article</title>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                margin: 0;
+                padding: 0;
+            }
+            .body{
+                padding: 0 0.5em;
+                margin: 0;
+                background-color: #fff;
+            }
+            ul{
+                list-style: none;
+                padding: 0;
+            
+            }
+            a{
+                text-decoration: none;
+                color: inherit;
+            }
+            .navi{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0;
+                border-bottom: 2px solid #D0D5E4;
+            }
+            .main-nav{
+                display: flex;
+                justify-content: space-evenly;
+                
+            }
+            .main-nav li{
+                padding-right: 1em;
+            }
+            .arrow-down:after{
+                content: "";
+                width: 0;
+                height: 0;
+                display: inline-block;
+                margin-left: .5em;
+                margin-top: .4em;
+                border-top: 6px solid #0E1731;
+                border-left: 6px solid transparent;
+                border-right: 6px solid transparent;
+            }
+            .btn{
+                border: 1px solid #D0D5E4;
+                padding: .5em 1em;
+                margin: .5em;
+                border-radius: 1.5em;
+            }
+            .dark{
+                border: none;
+                background-color: #0E1731;
+                color:#fff;
+            }
+            .sub-nav{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .sub-cta{
+                display: flex;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="body">
+            <nav class="navi">
+                <ul class="main-nav">
+                    <li class="arrow-down"><a href="#">Product</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li class="arrow-down"><a href="#">Use Cases</a></li>
+                    <li ><a href="#">Blog</a></li>
+                </ul>
+                <div class="nav-cta">
+                    <a href="#" class="btn">Login In</a>
+                    <a href="#" class="btn dark">Get Started</a>
+                </div>
+            </nav>
+            <nav class="sub-nav">
+                <ul class="sub-cta">
+                    <li>Project</li>
+                    <li>Remote</li>
+                    <li>Team work</li>
+                    <li>Productivity</li>
+                    <li>Marketing</li>
+                </ul>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20.414" height="20.414" viewBox="0 0 20.414 20.414">
+                    <g id="icons_border_dark_search" data-name="icons/border/dark/search" transform="translate(1 1)">
+                      <g id="search">
+                        <circle id="Oval" cx="8" cy="8" r="8" fill="none" stroke="#10182f" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+                        <path id="Path" d="M4.35,4.35,0,0" transform="translate(13.65 13.65)" fill="none" stroke="#10182f" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+                      </g>
+                    </g>
+                  </svg>                  
+            </nav>
+            <div class="hero">
+                <h1>Productivity</h1>
+                <img src="photo/ui-day-10-hero.png" alt="hero">
+                <h3>Little things do make a difference </h3>
+                <p>Why do you want to motivate yourself? Actually just answerring that question fully can be one of the better ways to get your daily motivation.</p>
+                <div class="cite">
+                    <img class="cite-img" src="photo/img-4.png">
+                    <p class="cite-auth">Kathryn Shelton</p>
+                </div>
+
+            </div>  
+            <article class="article">
+               <h4>Recent Articles</h4>
+               <div class="article-content">
+                <img src="photo/ui-day-10-article (1).png" alt="article" class="article-img">
+                  <div class="article-text">
+                      <h3>Common Symbols and their meaning</h3>
+                      <div class="cite">
+                        <img class="cite-img" src="photo/img-3.png">
+                          <p class="cite-auth">Sussie Russell</p>
+                    </div>
+                  </div>
+               </div>
+
+
+               <div class="article-content">
+                <img src="photo/ui-day-10-article (2).png" alt="article" class="article-img">
+                  <div class="article-text">
+                      <h3>success steps for your business</h3>
+                      <div class="cite">
+                          <img class="cite-img" src="photo/img-2.png">
+                          <p class="cite-auth">Connor Parsons</p>
+                    </div>
+                  </div>
+               </div>
+
+               <div class="article-content">
+                <img src="photo/ui-day-10-article (3).png" alt="article" class="article-img">
+                  <div class="article-text">
+                      <h3>the strength of your belief</h3>
+                      <div class="cite">
+                        <img class="cite-img" src="photo/img-6.png">
+                          <p class="cite-auth">Jonathan Yates</p>
+                    </div>
+                  </div>
+               </div>
+            </article>  
+        </div>
+    </body>
+</html>
+  
