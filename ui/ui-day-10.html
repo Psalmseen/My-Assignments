@@ -6,16 +6,22 @@
         <style>
             *{
                 box-sizing: border-box;
+                /* border: 2px solid red; */
             }
             body{
                 margin: 0;
                 padding: 0;
+                display: grid;
+                background-color: #125554;
+                min-height: 100vh;
             }
             .body{
-                padding: 0 0.5em;
+                padding:1em;
                 margin: 0;
                 background-color: #fff;
+                place-self: center;
                 display: grid;
+                border-radius: 1em;
             }
             ul{
                 list-style: none;
@@ -52,6 +58,7 @@
             }
             .btn{
                 border: 1px solid #D0D5E4;
+                display: inline-block;
                 padding: .5em 1em;
                 margin: .5em;
                 border-radius: 1.5em;
@@ -78,7 +85,8 @@
                 justify-content: space-between;
             }
             .hero{
-                
+                 margin-bottom: 1em;
+                 max-width: 500px;
             }
             .cite-img{
                 width: 3em;
@@ -93,7 +101,7 @@
                 align-items: center;
             }
             .cite-auth{
-                margin: .5em;
+                margin-left: .5em;
             }
             .cite-1{
                 background-image: url("photo/img-4.png");
@@ -111,16 +119,15 @@
             }
             .article{
                 display: flex;
-                padding: 1em;
+                padding: 1em 0;
                 flex-direction: column;
-                justify-content: space-evenly;
+                justify-content: space-between;
             }
             .article-content{
                 display: flex;
-                
             }
             .article-img{
-                width: 7em;
+                max-width: 9em;
                 margin: 1em;
                 justify-self: center;
             }
@@ -128,103 +135,238 @@
                 display: flex;
                 flex-direction: column;
                 justify-self: center;
-                height: 7em;
+                height: 9em;
                 margin: auto 0;
                 justify-content: space-between;
-                width: 12em;
+                max-width: 12em;
             }
             .hero-desc{
                 width: 80%;
             }
             .hero-img{
                 width: 100%;
+                padding: 1em;
+                
             }
             .article-text h3{
                 margin: 0;
+                text-transform: capitalize;
             }
+            .rece{
+                justify-self: flex-end;
+                
+            }
+            .search{
+                margin: 1em;
+            }
+            .open-nav,
+            .close-nav{
+                display: none;
+            }
+            @media (max-width: 600px){
+                .open-nav,
+                .close-nav{
+                    display: unset;
+                } 
+                .open-nav{
+                    position: absolute;
+                    right: 1em;
+                }
+                .header{
+                    position: fixed;
+                    background-color: #D0D5E4;
+                    top:0;
+                    bottom:0;
+                    right: 0;
+                    width: 60%;
+                    border-radius: 1em 0 0 1em ;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    transform: translateX(100%);
+                    opacity:0 ;
+                    transition: all 0.75s;
+                }
+                .nav-opener{
+                    transform: translateX(0);
+                    opacity: 1;
+
+                }
+                .close-nav{
+                    position: absolute;
+                    right: 1em;
+                }
+                .sub-nav,
+                .sub-cta,
+                .navi{
+                    flex-direction: column;
+                    align-self: flex-start;
+                    padding-left: 1em;
+                }
+                .btn{
+                    border: 1px solid #0E1731;
+                }
+                .navi{
+                    height: 70%;
+                    max-height: 600px;
+                    width:100%;
+                    justify-content: space-evenly;
+                    border-bottom: 2px solid #0E1731;
+                }
+                .main-nav{
+                    display: flex;
+                    flex-direction: column;
+                    align-self: flex-start;
+                    justify-content: space-between;
+                    justify-self: stretch;
+                    height: 90%;
+                    font-size: 2em;
+                }
+                .search{
+                    display: none;
+                }
+                .nav-cta{
+                    margin-top:auto ;
+                }
+                .arrow-down:after{
+                    border: 0;
+                }
+                .sub-nav{
+                    height: 30%;
+                    margin-bottom: auto;
+                }
+                .sub-cta{
+                    padding: 0;
+                    font-size:1.1em ;
+                    height: 80%;
+                    justify-content: space-evenly;
+                    color:#000a;
+                }
+            }
+
+            .day{
+                  text-transform: uppercase;
+                  font-weight: 900;
+                  font-size: 2em;
+                  letter-spacing: 2px;
+                  text-decoration: underline;
+                  align-self: top;
+                  text-align: center;
+               }
+               .page{
+                  align-self: flex-end;
+                  margin-top: auto;
+                  bottom: 0;
+                  display: flex;
+                  width: 100%;
+                  justify-content: space-between;
+                  align-items: center;
+               }
         </style>
     </head>
     <body>
+        <p class="day">day 10</p>
         <div class="body">
-            <nav class="navi">
-                <ul class="main-nav">
-                    <li class="arrow-down"><a href="#">Product</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li class="arrow-down"><a href="#">Use Cases</a></li>
-                    <li ><a href="#">Blog</a></li>
-                </ul>
-                <div class="nav-cta">
-                    <a href="#" class="btn">Login In</a>
-                    <a href="#" class="btn dark">Get Started</a>
-                </div>
-            </nav>
-            <nav class="sub-nav">
-                <ul class="sub-cta">
-                    <li>Project</li>
-                    <li>Remote</li>
-                    <li>Team work</li>
-                    <li>Productivity</li>
-                    <li>Marketing</li>
-                </ul>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20.414" height="20.414" viewBox="0 0 20.414 20.414">
-                    <g id="icons_border_dark_search" data-name="icons/border/dark/search" transform="translate(1 1)">
-                      <g id="search">
-                        <circle id="Oval" cx="8" cy="8" r="8" fill="none" stroke="#10182f" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
-                        <path id="Path" d="M4.35,4.35,0,0" transform="translate(13.65 13.65)" fill="none" stroke="#10182f" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
-                      </g>
-                    </g>
-                  </svg>                  
-            </nav>
+            <p class="open-nav"> &#9776</p>
+            <header class="header nav-opener">
+                <p class="close-nav"> &#967</p>
+                <nav class="navi">
+                    <ul class="main-nav">
+                        <li class="arrow-down"><a href="#">Product</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li class="arrow-down"><a href="#">Use Cases</a></li>
+                        <li ><a href="#">Blog</a></li>
+                    </ul>
+                    <div class="nav-cta">
+                        <a href="#" class="btn">Login In</a>
+                        <a href="#" class="btn dark">Get Started</a>
+                    </div>
+                </nav>
+                <nav class="sub-nav">
+                    <ul class="sub-cta">
+                        <li>Project</li>
+                        <li>Remote</li>
+                        <li>Team work</li>
+                        <li>Productivity</li>
+                        <li>Marketing</li>
+                    </ul>
+                    <svg class="search" xmlns="http://www.w3.org/2000/svg" width="20.414" height="20.414" viewBox="0 0 20.414 20.414">
+                        <g id="icons_border_dark_search" data-name="icons/border/dark/search" transform="translate(1 1)">
+                        <g id="search">
+                            <circle id="Oval" cx="8" cy="8" r="8" fill="none" stroke="#10182f" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+                            <path id="Path" d="M4.35,4.35,0,0" transform="translate(13.65 13.65)" fill="none" stroke="#10182f" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+                        </g>
+                        </g>
+                    </svg>                  
+                </nav>
+            </header>
             <main class="content-wrapper">
                 <div class="hero">
-                    <h1>Productivity</h1>
-                    <img class="hero-img" src="photo/ui-day-10-hero.png" alt="hero">
-                    <h3>Little things do make a difference </h3>
-                    <p class="hero-desc">Why do you want to motivate yourself? Actually just answerring that question fully can be one of the better ways to get your daily motivation.</p>
+                    <div class="hero-left">
+                        <h1>Productivity</h1>
+                        <img class="hero-img" src="photo/ui-day-10-hero.png" alt="hero">
+                    </div>
+                    <div class="hero-right">
+                        <h3>Little things do make a difference </h3>
+                        <p class="hero-desc">Why do you want to motivate yourself? Actually just answerring that question fully can be one of the better ways to get your daily motivation.</p>
                     <div class="cite">
                         <div class="cite-img cite-1"></div>
                         <p class="cite-auth">Kathryn Shelton</p>
                     </div>
-
+                </div>
                 </div>  
-                <article class="article">
-                <h4>Recent Articles</h4>
-                <div class="article-content">
-                    <img src="photo/ui-day-10-article (1).png" alt="article" class="article-img">
-                    <div class="article-text">
-                        <h3>Common Symbols and their meaning</h3>
-                        <div class="cite">
-                            <div class="cite-img cite-2"></div>
-                            <p class="cite-auth">Sussie Russell</p>
+                <div>
+                    <h4 class="rece">Recent Articles</h4>
+                    <article class="article">
+                    <div class="article-content">
+                        
+                        <img src="photo/ui-day-10-article (1).png" alt="article" class="article-img">
+                        <div class="article-text">
+                            <h3>Common Symbols and their meaning</h3>
+                            <div class="cite">
+                                <div class="cite-img cite-2"></div>
+                                <p class="cite-auth">Sussie Russell</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
 
-                <div class="article-content">
-                    <img src="photo/ui-day-10-article (2).png" alt="article" class="article-img">
-                    <div class="article-text">
-                        <h3>success steps for your business</h3>
-                        <div class="cite">
-                            <div class="cite-img cite-3"></div>
-                            <p class="cite-auth">Connor Parsons</p>
+                    <div class="article-content">
+                        <img src="photo/ui-day-10-article (2).png" alt="article" class="article-img">
+                        <div class="article-text">
+                            <h3>success steps for your business</h3>
+                            <div class="cite">
+                                <div class="cite-img cite-3"></div>
+                                <p class="cite-auth">Connor Parsons</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="article-content">
-                    <img src="photo/ui-day-10-article (3).png" alt="article" class="article-img">
-                    <div class="article-text">
-                        <h3>the strength of your belief</h3>
-                        <div class="cite">
-                            <div class="cite-img cite-4"></div>
-                            <p class="cite-auth">Jonathan Yates</p>
+                    <div class="article-content">
+                        <img src="photo/ui-day-10-article (3).png" alt="article" class="article-img">
+                        <div class="article-text">
+                            <h3>the strength of your belief</h3>
+                            <div class="cite">
+                                <div class="cite-img cite-4"></div>
+                                <p class="cite-auth">Jonathan Yates</p>
+                            </div>
                         </div>
                     </div>
+                    </article> 
                 </div>
-                </article> 
             </main> 
         </div>
+        <div class="page">
+            <a href="https://psalmseen.github.io/My-Assignments/ui/ui-day-9.html" class=" btn">Prev</a>
+            <a href="https://psalmseen.github.io/My-Assignments/ui/ui-day-10.html" class=" btn">Next</a>
+         </div>
+        <script>
+           const openBtn = document.querySelector(".open-nav");
+           const closeBtn = document.querySelector(".close-nav");
+           const header = document.querySelector(".header");
+           openBtn.addEventListener("click", () =>{header.classList.add("nav-opener")})
+           closeBtn.addEventListener("click", () =>{header.classList.remove("nav-opener")})
+        </script>
     </body>
 </html>
   
