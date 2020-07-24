@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Search UI</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Muli:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <style>
+            *{
+                box-sizing: border-box;
+                /* border: 1px solid; */
+            }
+            body{
+                margin: 0;
+                padding: 0;
+                background-color: #EDF4F3;
+                display: grid;
+                min-height: 100vh;
+                line-height: 1.6;
+                font-family: "Muli", sans-serif;
+                font-weight: 100;
+                font-size: 1rem;
+            }
+            .body{
+                background-color: #fff;
+                place-self: center;
+                padding: 1em;
+                border-radius: 1em;
+                width: 100%;
+                max-width: 1200px;
+            }
+            main{
+                display: flex;
+                align-items:flex-end;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+            .search-desc{
+                margin: 0 .5em 0 0;
+                padding: 0;
+            }
+            .search-desc h3{
+                margin-top: 0;
+                margin-bottom: .5em;
+            }
+            .search-desc p{
+                margin-bottom: 0;
+                margin-top: .5em;
+            }
+            form{
+                display: grid;
+                flex-grow: 1;
+                grid-template-columns: repeat(2, minmax(100px, 1fr)) .6fr;
+                grid-gap: .5em;
+                padding: .5em 0;
+            }
+            select{
+                appearance: none;
+                /* min-width: 10em; */
+                height: 3.5em;
+                padding-left:.5em ;
+                border-radius: 5px;
+                font-weight: bold;
+                display: inline-block;
+                border: 2px solid #CDCDCD;
+            }
+            /* select::before{
+                content:"2"; 
+                appearance: none;
+                display: inline-block;
+                background-image:url(photo/Arrow-down.svg); 
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 2em;
+                height: 2em;
+                color: greenyellow;            
+            } */
+            button,
+            .btn{
+                border-radius: 5px;
+                background-color: #2ECF9A;
+                border: none;
+                box-shadow: 0 5px 5px #2ECF9A;
+            }
+            button:hover,
+            button:focus,
+            .btn:hover,
+            .btn:focus{
+                box-shadow: unset;
+            }
+            aside{
+                background-color: #EDF4F3;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+                grid-gap: 1em;
+                justify-content: space-between;
+                padding: 2em 2em 1em;
+                margin-top: 2em;
+            }
+            h4{
+                position: relative;
+                margin-top: 0mm;
+            }
+            h4 span{
+                display: block;
+            }
+            .foot-text{
+                margin-bottom: 0mm;
+            }
+            .foot-desc{
+                padding: 0 0 0 1em;
+            }
+            h4::before{
+                content: "";
+                display: inline-block;
+                position: absolute;
+                left: -2.5em;
+                top:.5em;
+                width: 2em;
+                height: 2em;
+            }
+            .get::before{
+                background-image: url(photo/Search.svg);
+            }
+            .publish::before{
+                background-image: url(photo/publish.svg);
+            }
+            .post::before{
+                background-image: url(photo/post.svg);
+            }
+            .day{
+                  text-transform: uppercase;
+                  font-weight: 900;
+                  font-size: 2em;
+                  letter-spacing: 2px;
+                  text-decoration: underline;
+                  align-self: top;
+                  text-align: center;
+               }
+               .page{
+                  align-self: flex-end;
+                  margin-top: auto;
+                  bottom: 0;
+                  display: flex;
+                  width: 100%;
+                  justify-content: space-between;
+                  align-items: center;
+               }
+               .btn{
+                   display: inline-block;
+                   padding: .5em 2em;
+                   margin: 1em;
+                   text-decoration: none;
+                   color: black;
+                   font-weight: 600;
+               }
+        </style>
+    </head>
+    <body>
+        <p class="day">day 11</p>
+        <div class="body">
+            <main>
+                <div class="search-desc">
+                    <h3>Explore agencies</h3>
+                    <p>Select a region and city to discover.</p>
+                </div>
+                <form action="#" method="POST">
+                    <select>
+                        <option>Region</option>
+                    </select>
+                    <select>
+                        <option>City</option>
+                    </select>
+                    <button type="submit">Find</button>
+                </form>
+            </main>
+            <aside>
+                <div class="foot-desc">
+                    <h4 class="get">Get <span>Discovered</span></h4>
+                    <p class="foot-text">Get listed in location based agency directories and attract business</p>
+                </div>
+                <div class="foot-desc">
+                    <h4 class="publish">Publish <span>Content</span></h4>
+                    <p class="foot-text">Get listed in location based agency directories and attract business</p>
+                </div>
+                <div class="foot-desc">
+                    <h4 class="post">Post <span>Jobs</span></h4>
+                    <p class="foot-text">Get listed in location based agency directories and attract business</p>
+                </div>
+            </aside>
+        </div>
+        <div class="page">
+            <a href="https://psalmseen.github.io/My-Assignments/ui/ui-day-10.html" class=" btn">Prev</a>
+            <!-- <a href="https://psalmseen.github.io/My-Assignments/ui/ui-day-12.html" class=" btn">Next</a> -->
+         </div>
+    </body>
+</html>
