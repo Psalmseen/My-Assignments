@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Footer UI</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Muli:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                margin:0;
+                padding: 0;
+                display: grid;
+                font-family: "Muli", sans-serif;
+                min-height: 100vh;
+                background-color: #F4F6FF;
+            }
+            .body{
+                margin: 0;
+                padding: 2em;
+                background-color: #FFF;
+                place-self: center;
+                width: 90%;
+                max-width: 1000px;
+                border-radius: 10px;
+                font-size: .8rem;
+                box-shadow: 10px 20px 45px -25px #1063FF;
+            }
+            a{
+                text-decoration: none;
+                color: inherit;
+                display: block;
+                padding: 1em 0;
+                transition: all .5s;
+            }
+            a:hover{
+                transform: scale(1.1) translate(10px, 2px);
+                
+            }
+            main{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                justify-content: space-between;
+            }
+            .news{
+                padding-right:1em;
+            }
+            h4{
+                font-size: 1.2rem;
+                text-transform: uppercase;
+                font-weight: normal;
+                letter-spacing: 1.5px;
+            }
+            .post h5{
+                margin-top: 0;
+                margin-bottom: .5em;
+                font-size: 1rem;
+                font-weight: normal;
+                letter-spacing: 1px;
+                color: #0009;
+            }
+            .post h6{
+                margin-top: 0;
+                margin-bottom: .5em;
+                font-size: .9rem;
+                letter-spacing: .8px;
+                width: 90%;
+                font-weight: normal;
+            }
+            span{
+                display: block;
+            }
+            .red{
+                color: #f53c3c;
+            }
+            .post-wrapper{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .post-img{
+                width: 100px;
+                height: 100px;
+                margin-right: 2em;
+                margin-bottom: 2em;
+                background-position: center;
+                background-size: cover;
+                box-shadow: 5px 5px 15px -8px #1063FF;
+                /* background-color: red; */
+            }
+            .map{
+                background-image: url("photo/map.png");
+            }
+            .cal{
+                background-image: url("photo/cal.png");
+            }
+            .post-text{
+                max-width: 300px;
+                margin-bottom: 2em;
+                
+            }
+            footer{
+                background-color: #1A1C52;
+                padding: 1em 2em;
+                border-radius: 10px;
+                color: #FFF;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            .btn{
+                display: inline-block;
+                background-color: #5458C7;
+                padding: .75em 2em;
+                text-align: center;
+                border-radius: 5px;
+            }
+            .day{
+                  text-transform: uppercase;
+                  font-weight: 900;
+                  font-size: 2em;
+                  letter-spacing: 2px;
+                  text-decoration: underline;
+                  align-self: top;
+                  text-align: center;
+               }
+               .page{
+                  align-self: flex-end;
+                  padding: 0 1em;
+                  margin-top: auto;
+                  
+                  bottom: 0;
+                  display: flex;
+                  width: 100%;
+                  justify-content: space-between;
+                  align-items: center;
+               }
+        </style>
+    </head>
+    <body>
+        <p class="day">day 12</p>
+        <div class="body">
+            <main>
+                <div class="news">
+                    <h4>News</h4>
+                    <a href="#">Agency News</a>
+                    <a href="#">Brand News</a>
+                    <a href="#">Industry News</a>
+                    <a href="#">Marketing Resources</a>
+                    <a href="#">Interviews</a>
+                    <a href="#">Awords</a>
+                    <a href="#">Web Design</a>
+                </div>
+                <div class="news">
+                    <h4>Work</h4>
+                    <a href="#">Ad Campaings</a>
+                    <a href="#">Branding</a>
+                    <a href="#" class="red">Case Studio</a>
+                    <a href="#">Social Media Campaings</a>
+                    <a href="#">Web Design</a>
+                </div>
+                <div class="news">
+                    <h4>Blog</h4>
+                    <a href="#">Marketing</a>
+                    <a href="#">SEO & SEM</a>
+                    <a href="#">Virtual Reality</a>
+                    <a href="#">AI Marketing</a>
+                </div>
+                <div class="post">
+                    <h4>Featured posts</h4>
+                    <div class="post-wrapper">
+                        <div class="post-img map"></div>
+                        <div class="post-text">
+                            <h5>NEWS|Marketing News</h5>
+                            <h6>My Experience with Neumorphism<span> (tips and resources)</span></h6>
+                            <p>A couple of week ago I thought about experimenting with Neumorphism, since I havent been doing much of it despite its growing popularity.</p>
+                        </div>
+                    </div>
+                    <div class="post-wrapper">
+                        <div class="post-img cal"></div>
+                        <div class="post-text">
+                            <h5>NEWS|Marketing News</h5>
+                            <h6>Date Picker UI Designs created with Sketch, Photoshop and Figma</h6>
+                            <p>A couple of week ago I thought about experimenting with Neumorphism, since I havent been doing much of it despite its growing popularity.</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <div class="footer-text">
+                    <p class="foot-title">Switch to pro plan today and save <span>up to 30% off</span></p>
+                    <p class="foot-desc">Check which vendor are available to upgrade to and validate whether</p>
+                </div>
+                <a href="#" class="btn">Upgrade my plan</a>
+            </footer>
+        </div>
+        <div class="page">
+            <a href="https://psalmseen.github.io/My-Assignments/ui/ui-day-11.html" class=" btn">Prev</a>
+            <!-- <a href="https://psalmseen.github.io/My-Assignments/ui/ui-day-13.html" class=" btn">Next</a> -->
+         </div>
+    </body>
+</html>
