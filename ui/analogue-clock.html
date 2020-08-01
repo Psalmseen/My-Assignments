@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Analogue Clock</title>
+        <script>
+            window.onload=time();
+            function time(){
+            var today= new Date();// open new date object
+            var mm=today.getMilliseconds();
+            var s=today.getSeconds();
+            var m=today.getMinutes();
+            var h=today.getHours();
+            t = setTimeout(time, 1);
+            var g=(s+(mm/1000))*6;
+            var i=(m+(g/360))*6;
+            var k=(h<12)?((h+(i/360))*30): (((h-12)+(i/360))*30);
+            var f=`rotate(${g}deg)`;
+            var j=`rotate(${i}deg)`;
+            var l=`rotate(${k}deg)`;
+            document.querySelector(".seconds").style.transform=f;
+            document.querySelector(".minutes").style.transform=j;
+            document.querySelector(".hours").style.transform=l;
+            }
+            </script>
+            <link href="https://fonts.googleapis.com/css2?family=Muli:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+           *{
+               box-sizing: border-box;
+           }
+            body{
+                margin: 0;
+                padding: 0;
+                display: grid;
+                place-content: center;
+                background-color: #0b0714;
+                min-height: 100vh;
+                font-size: 4vmin;
+                font-weight: bold;
+                font-family: 'Montserrat', sans-serif;
+            }
+            .container{
+                width: 50vmin;
+                height: 50vmin;
+                border-radius: 50%;
+                background-image: url("photo/img-6.png");
+                background-size: cover;
+                background-position: center;
+                background-blend-mode:soft-light;
+                background-color: teal;
+                box-sizing: content-box;
+                border:2vmin solid #123;
+                position: relative;
+                display: grid;
+            }
+            .seconds,
+            .minutes,
+            .hours{
+                display: grid;
+                border-radius: 50%;
+                place-self: center;
+                position: absolute;
+                
+            }
+            .seconds{
+                width: 100%;
+                height: 100%;
+            }
+            .minutes{
+                width: 80%;
+                height: 80%;
+            }
+            .hours{
+                width: 50%;
+                height: 50%;
+            }
+            .cdot{
+                width: 2vmin;
+                background-color: #600;
+                height: 2vmin;
+                z-index: 5;
+                border-radius: 50%;
+                place-self: center;
+                position: absolute;
+            }
+            .secH,.minH,.hourH{
+                height: 50%;
+                position: absolute;
+                top: 7.5%;
+                background-color:turquoise;
+                justify-self: center;
+                
+            }
+            .secH{
+                width: .4vmin;
+                background:black;
+            }
+            .minH{
+                width: .8vmin;
+                background: #071822;
+                border-radius: 0.5vmin / 40% 40% 2% 2%;
+            }
+            .hourH{
+                width: 1.2vmin;
+                border-radius: 1vmin / 40% 40% 8% 8%;
+                background: #02091b;
+            }
+            span{
+                display: block;
+                position: absolute;
+                color:black;
+            }
+            .no3{
+                left: calc(100% - 2vmin);
+                top: calc(50% - 2vmin);
+            }
+            .no6{
+                top:calc(100% - 4vmin);
+                left: calc(50% - 2vmin);
+            }
+            .no9{
+                top: calc(50% - 2vmin);
+            }
+            .no12{
+                left: calc(50% - 2vmin);
+            }
+            .n{
+                position: absolute;
+                width: 50vmin;
+                height: 50vmin;
+                text-align:center;
+                display:grid;
+               justify-items: center;
+            }
+            .o1{
+                transform: rotate(30deg);
+            }
+            .o2{
+                transform: rotate(60deg);
+            }
+            .o4{
+                transform: rotate(120deg);
+            }
+            .o5{
+                transform: rotate(150deg);
+            }
+            .o7{
+                transform: rotate(210deg);
+            }
+            .o8{
+                transform: rotate(2400deg);
+            }
+            .o10{
+                transform: rotate(300deg);
+            }
+            .o11{
+                transform: rotate(330deg);
+            }
+            .n1{
+                transform: rotate(-30deg);
+            }
+            .n2{
+                transform: rotate(-60deg);
+            }
+            .n4{
+                transform: rotate(-120deg);
+            }
+            .n5{   
+                transform: rotate(-150deg);
+            }
+            .n7{   
+                transform: rotate(-210deg);
+            }
+            .n8{   
+                transform: rotate(-240deg);
+            }
+            .n10{   
+                transform: rotate(-300deg);
+            }
+            .n11{   
+                transform: rotate(-330deg);
+            }
+            .auth{
+                position: absolute;
+                text-align: center;
+                left: 0;
+                right: 0;
+                top:65%;
+                font-family:"muli";
+                color: #0009;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <p class="auth">Psalmseen</p>
+            <div class="n o1">
+                <span class="n1">1</span>
+            </div>
+            <div class="n o2">
+                <span class="n2">2</span>
+            </div>
+                <span class="no3">3</span>
+            <div class="n o4">
+                <span class="n4">4</span>
+            </div>
+            <div class="n o5">
+                <span class="n5">5</span>
+            </div>
+                <span class="no6">6</span>
+            <div class="n o7">
+                <span class="n7">7</span>
+            </div>
+            <div class="n o8">
+                <span class="n8">8</span>
+            </div>
+                <span class="no9">9</span>
+            <div class="n o10">
+                <span class="n10">10</span>
+            </div>
+            <div class="n o11">
+                <span class="n11">11</span>
+            </div>
+                <span class="no12">12</span>
+            <div class="hours">
+                <div class="hourH"></div>
+            </div>
+            <div class="minutes">
+                <div class="minH"></div>
+            </div>
+            <div class="seconds">
+                <div class="secH"></div>
+            </div>
+            <div class="cdot"></div>
+        </div>
+    </body>
+</html>
