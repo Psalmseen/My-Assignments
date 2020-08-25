@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="voewport" content="width=device-width, initial-scale=1">
+        <link href="todo-style.css" rel="stylesheet"/>
+        <title>Todos</title>
+    </head>
+    <body>
+        <h1 id="page-title">Psalmseen Todo</h1>
+        <form>
+            <input type="text" id="todo-input"   autocomplete="off" placeholder="Add Todos here .....">
+            <input type="submit"  id="add-todo" value="Add">
+        </form>
+        <div class="todo-wrapper">
+            <div class="todo-cards todo-list">
+                <h2> Todos </h2>
+                <ol id="todo-list">
+                    <p>All your Todos appear here</p>
+                
+                </ol>
+            </div>
+            <div class="todo-cards completed-todo">
+                <h2> Completed Todos  </h2>
+                <ol  id="completed-todo">
+                    <p>All your completed Todos appear here</p>
+                    
+                </ol>
+            </div>
+            <div class="todo-cards pending-todo">
+                <h2> Pending Todos  </h2>
+                <ol  id="pending-todo">
+                    <p>All your pending Todos appear here</p>
+                    
+                </ol>
+            </div>
+        </div>
+        <p>Check the box to add it to completed Todo</p>
+        <script src="todo-script.js"></script>
+    </body>
+</html>
