@@ -1,9 +1,12 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap');
 *{
     box-sizing: border-box;
 }
 body{
     display: grid;
     justify-content:center;
+    font-family: 'Playfair Display', serif;
     background: #aaa;
     font-size: 1rem;
     padding: 0;
