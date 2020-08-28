@@ -1,12 +1,9 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap');
 *{
     box-sizing: border-box;
 }
 body{
     display: grid;
     justify-content:center;
-    font-family: 'Playfair Display', serif;
     background: #aaa;
     font-size: 1rem;
     padding: 0;
@@ -62,13 +59,17 @@ input:hover{
     background: rgba(255, 0, 0, 0.466);
 }
 li{
-    display: flex; 
-    justify-content: space-between; 
+    display: flex;
+    justify-content: space-between;
+    
 }
-li:first-letter{
+li > input{
+    margin-left: auto;
+    padding:1em;
+}
+span::first-letter{
     text-transform: uppercase;
-    color: green;
 }
-body >p{
+body > p{
     text-align: center;
 }
