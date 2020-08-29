@@ -26,7 +26,11 @@ class Todo {
 
          //sort Completed and pending Todos
          document.body.addEventListener("click", (event) => {
-           
+            
+            if(event.target.className == "fas fa-trash-alt"){
+               //console.log(event.target.id)
+               this.deleteTodo(event.target.id);
+            }
             if(event.target.type === "checkbox"){ //check to see if checkbox is checked and calls handleChange
                this.handleChange(event.target.id)
             }
@@ -51,7 +55,8 @@ class Todo {
                   }
                })
                this.$completedTodo.innerHTML = this.checkedTodo.length > 0 ? this.checkedTodo.map(el =>`<li id = "${el.id}" ><span>${el.text}</span></li>`).join("") : `<p>All your completed Todos appear here</p>`;
-               this.$pendingTodo.innerHTML = this.uncheckedTodo.length > 0 ? this.uncheckedTodo.map(el =>`<li id = "${el.id}" ><span>${el.text}</span></li>`).join("") : `<p>All your completed Todos appear here</p>`;
+               this.$pendingTodo.innerHTML = this.uncheckedTodo.length > 0 ? this.uncheckedTodo.map(el =>`<li id = "${el.id}" ><span>${el.text}</span></li>`).join("") : `<p>All your pending Todos appear here</p>`;
+              
          })
          
      }
@@ -64,7 +69,7 @@ class Todo {
          id: this.todos.length > 0 ? this.todos[this.todos.length-1].id + 1 : 1
           }
           this.todos.push(newTodo);
-          this.mappedTodo.push( `<li id = "${newTodo.id}" >${newTodo.id}. <span>${newTodo.text}</span> <input class ="in" id = "${newTodo.id}" type="checkbox"/></li>`);
+          this.mappedTodo.push( `<li id = "${newTodo.id}" ><span> ${newTodo.text}</span> <span class ="inpt"> <img src="photo/delete.svg" class="fas fa-trash-alt" id = "${newTodo.id}"/> <input class ="in" id = "${newTodo.id}" type="checkbox"/> </span> </li>`);
          }
          this.$todoList.innerHTML  = this.mappedTodo.join("");
          this.$todoInput.value ="";
@@ -73,8 +78,14 @@ class Todo {
 
        handleChange(id){// edits the mapped todo and gives it a checked attribute
           let currentTodo = this.mappedTodo[id-1];
-          const index = currentTodo.indexOf("input" ) + 5;
+          const index = currentTodo.indexOf('type="checkbox"' );
           this.mappedTodo[id-1] = currentTodo.slice(0, index) + " checked " +currentTodo.slice(index); 
+       }
+
+       deleteTodo(id){
+         this.mappedTodo[id-1] = "";
+         const  hasAnyElement = this.mappedTodo.reduce( (acc, el) => acc = Boolean(el || acc));
+         this.$todoList.innerHTML = hasAnyElement ? this.mappedTodo.join("") : `<p>All your  Todos appear here</p>`;
        }
 }
 

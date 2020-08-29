@@ -14,7 +14,7 @@ body *{
 }
 .todo-wrapper{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 2em;
     padding: 2em 0;
 }
@@ -24,6 +24,8 @@ body *{
     box-shadow: inset -10px -10px 25px -10px black,  -5px -5px 25px -5px white;
 }
 ol{
+    counter-reset: item;
+    margin-left: 0;
     padding-left: 0em;
     list-style-position: inside;
 }
@@ -59,17 +61,30 @@ input:hover{
     background: rgba(255, 0, 0, 0.466);
 }
 li{
-    display: flex;
-    justify-content: space-between;
-    
+     display: flex;
+     margin-bottom: .5em;
 }
-li > input{
+li:before{
+    display: inline-block;
+    content: counter(item)".";
+    counter-increment: item;
+    width: 1em;
+    margin-left: -em;
+}
+li > .inpt{
     margin-left: auto;
-    padding:1em;
+    padding:0 1em ;
+    display: flex;
+    flex-flow: nowrap;
 }
 span::first-letter{
     text-transform: uppercase;
 }
 body > p{
     text-align: center;
+}
+.fas{
+    font-size: 1em;
+    color:red;
+    height: 1em;
 }
