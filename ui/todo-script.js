@@ -104,7 +104,7 @@ class Todo {
        deleteTodo(id){
          this.mappedTodo[id-1] = "";
          this.render();
-         this.rendercheck()
+         this.rendercheck();
        }
 }
 

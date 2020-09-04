@@ -48,6 +48,7 @@ input:hover{
 }
 #add-todo{
     margin-left: auto;
+    background-color: #1daaaabb;
     
 }
 #todo-input{
