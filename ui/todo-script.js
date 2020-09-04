@@ -98,12 +98,13 @@ class Todo {
           let currentTodo = this.mappedTodo[id-1];
           const index = currentTodo.indexOf('type="checkbox"' );
           this.mappedTodo[id-1] = this.mappedTodo[id-1].includes("checked") ? currentTodo.slice(0, index - 9) + currentTodo.slice(index) : currentTodo.slice(0, index) + " checked " +currentTodo.slice(index); 
-          console.log(this.mappedTodo[id-1]);
+          this.render();
        }
 
        deleteTodo(id){
          this.mappedTodo[id-1] = "";
          this.render();
+         this.rendercheck()
        }
 }
 
