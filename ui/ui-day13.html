@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Design day 13</title>
+        <script src="https://kit.fontawesome.com/07fd4e2b37.js" crossorigin="anonymous"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                margin: 0;
+                padding: 0 2em;
+                display: grid;
+                place-content: center;
+                min-height: 100vh;
+                background: #2F3550;
+                color: #fff;
+                font-size: 1rem;
+                font-family: 'Nunito Sans', sans-serif;
+                line-height: 1.7;
+            }
+            a{
+                color: inherit;
+            }
+            
+            #body{
+                    display: grid;
+                    grid-template-columns: minmax(200px, 1fr);
+                    grid-template-areas:
+                     "up"
+                     "down"
+                     "right";
+                    grid-gap: 2em;
+                }
+            .card{
+                background: #4265E2;
+                padding: 2em;
+                border-radius: 1em;
+            }
+            ul{
+                list-style-type: none;
+                padding:0em
+            }
+           .right-div{
+                grid-area: right;
+            }
+            .top{
+                grid-area: up;
+            }
+            .bottom{
+                grid-area: down;
+            } 
+            .hero-img{
+                width: 100%;
+            }
+            .text-container{
+                display: flex;
+
+            }
+            .arrow{
+                font-size:2em;
+                padding: 0 1em;
+                margin: 0;
+                justify-self: right;
+                font-weight: bold;
+            }
+            li{
+                display: flex;
+                align-items: center;
+            }
+            .link-arrow{
+                font-size: 1.5em;
+                padding: 0 .5em;
+                margin: 0;
+                align-self: center;
+                
+                
+            }
+            .subtext{
+                color:#fff9
+            }
+            .btn{
+                padding: .7em 2em;
+                color: #fff;
+                background: #6383F5;
+                display: inline-block;
+                text-decoration: none;
+                border-radius: .5em;
+
+            }
+            .fas{
+                padding-right:.54em;
+            }
+            @media (min-width: 800px) {
+                #body{
+                grid-template-columns: repeat(2, minmax(200px, 1fr));
+                grid-template-areas:
+                    "up  right"
+                    "down right" ;
+                grid-gap: 2em;
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <main id="body">
+            <div class=" top left-div card">
+                <h3 class="div-title">86 places</h3>
+                <div class="text-container">
+                    <p>See your most visited places and the place  you have been</p>
+                    <p class="arrow"> > </p>
+                    
+                </div>
+            </div>
+            <div class=" bottom left-div card">
+                <h3>Home and work</h3>
+                <ul>
+                    <li> <i class="fas fa-home"></i> <a href="#">Add your home address</a><p class="link-arrow"> > </p></li>
+                    <li> <i class="fas fa-laptop"></i> <a href="#">Add your work address</a><p class="link-arrow"> > </li>
+                </ul>
+            </div>
+            <div class="right-div card">
+                <img  class="hero-img"src="photo/ui-day-10-hero.png" alt="Nature">
+                <h3>Romania and Norway</h3>
+                <p class="subtext">Mar 18 - 31, 2018</p>
+                <a href="#" class="btn">View trips </a>
+            </div>
+        </main>
+    </body>
+</html>
