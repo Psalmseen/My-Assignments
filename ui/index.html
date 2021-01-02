@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <title>Africanka &mdash; Home</title>
+    
+</head>
+<body class="container">
+    <header class="header">
+        <img src="img/logo.svg" alt="Hero logo" class="header__logo">
+        <ul class="header__nav-list">
+            <li class="header__nav-item"><a href="#" class="header__nav-link">Home</a></li>
+            <li class="header__nav-item"><a href="#" class="header__nav-link">Blog</a></li>
+            <li class="header__nav-item"><a href="#foot" class="header__nav-link">Contact</a></li>
+        </ul>
+        <img src="img/hamburger.svg" alt="hamburger" class="header__hamburger">
+        <h1 class="header__heading">New automation tool for your home</h1>
+        <p class="header__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium veniam in quidem voluptas perspiciatis doloribus et tempora</p>
+        <button class="header__btn" >See our project</button>
+        <img src="img/hero.svg" alt="Header hero" class="header__hero">
+    </header>
+
+    <section class="features">
+        <h3 class="features__heading">What we do to help our client grow in digital era,</h3>
+        <div class="features__container">
+            <div class="card card--1">
+                <img src="img/business.svg" alt="Business man" class="card__image">
+                <h4 class="card__heading">Make your business to be better famous on the internet</h4>
+                <p class="card__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, Accusantium veniam in quidem voluptas perspiciatis doloribus et tempora</p>
+                <a href="#" class="card__link">Learn more <span class="card__arrow">&rarr;</span></a>
+            </div>
+
+            
+            <div class="card card--2">
+                <img src="img/technology.svg" alt="Business man" class="card__image">
+                <h4 class="card__heading">Bring technology to your comfrotable home</h4>
+                <p class="card__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, Accusantium veniam in quidem voluptas perspiciatis doloribus et tempora</p>
+                <a href="#" class="card__link">Learn more <span class="card__arrow">&rarr;</span></a>
+            </div>
+
+            <div class="card card--3">
+                <img src="img/digital.svg" alt="Business man" class="card__image">
+                <h4 class="card__heading">Build your digital product that suitable for your need</h4>
+                <p class="card__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, Accusantium veniam in quidem voluptas perspiciatis doloribus et tempora</p>
+                <a href="#" class="card__link">Learn more <span class="card__arrow">&rarr;</span></a>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section class="project">
+        <h2 class="project__heading"> Our finished project</h2>
+        <p class="project__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus, dicta aut? Velit culpa maxime voluptatem dolorem alias exercitationem sapiente? Maiores deleniti expedita quae nesciunt voluptatem sapiente facere, eos dolore est.</p>
+        <div class="slate slate--1">
+            <div class="slate__text">
+                <h4>Smart home Installation</h4>
+                <p>In Muarakana Housing Estate</p>
+            </div>
+            <img src="img/smart-home.svg" alt="image on home" class="slate__img">
+        </div>
+        <div class="slate slate--2">
+            <div class="slate__text">
+                <h4>Sparklite App Masterpiece</h4>
+            </div>
+        </div>
+        <div class="slate slate--3">
+            <div class="slate__text">
+                <h4> Car-Repitition App Board</h4>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="foot">
+        <h3 class="footer__heading heading-main">Our beloved client</h3>
+        <p class="footer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt eligendi delectus molestiae aliquam quam repudiandae, totam sunt tenetur aut</p>
+        <div class="footer__clients">
+            <p class="footer__client-logo">Logo client 1</p>
+            <p class="footer__client-logo">Logo client 2</p>
+            <p class="footer__client-logo">Logo client 3</p>
+            <p class="footer__client-logo">Logo client 4</p>
+            <p class="footer__client-logo">Logo client 5</p>
+            <p class="footer__client-logo">Logo client 6</p>
+            <p class="footer__client-logo">Logo client 7</p>
+            <p class="footer__client-logo">More client </p>
+        </div>
+
+        <div class="footer-desc">
+            <h3 class="footer__heading heading-desc">Interetsed to work with our team?</h3>
+            <button class="footer-desc__btn">Lets talk</button>
+            <p class="footer-desc__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut deserunt delectus quisquam, culpa soluta vel iste voluptatibus vero molestias enim omnis, assumenda.</p>
+            <hr class="footer-desc__line">
+            <div class="footer-desc__contact footer-desc__contact--1">
+                <h4><img src="img/logo-light.svg"> Africanka</h4>
+                <a href="#">A. Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
+                <a href="#">T. +62-812-7313-4321</a>
+                <a href="#">E. hello.afrian@gmail.com </a>
+            </div>
+            <div class="footer-desc__contact footer-desc__contact--2">
+                <h4>About Us</h4>
+                <a href="#">About</a>
+                <a href="#">What We Do</a>
+                <a href="#">Project</a>
+                <a href="#">How it Work With Us</a>
+            </div>
+            <div class="footer-desc__contact footer-desc__contact--3">
+                <h4>Follow Us</h4>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Youtube</a>
+            </div>
+            <div class="copyright">2020 &copy; Afrianska. All rights reserved.</div>
+        </div>
+    </footer>
+    <script>
+    const btn = document.querySelector(".header__hamburger");
+    const nav = document.querySelector(".header__nav-list");
+
+    
+    btn.addEventListener("click", () => {nav.classList.toggle("show-nav")});
+    nav.addEventListener("click", () => {nav.classList.toggle("show-nav")});
+
+
+  //  btn.addEventListener(click, ()=> {nav.ClassList.remove(".show-nav"); })
+    
+    </script>
+    </body>
+</html>
