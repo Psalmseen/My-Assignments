@@ -1,0 +1,239 @@
+*,
+*::before,
+*::after{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+    background-color: #ebebeb;
+    color: #0E0E0E;
+    font-family:"roboto", sans-serif;
+}
+.header{
+    background:#f7f7f7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    
+}
+.header__logo{
+    height: 5rem;
+}
+.header__logo-img{
+    height: 100%;
+}
+.header__nav-list{
+    display: flex;
+    min-width: 30rem;
+    width:40%;
+    justify-content: space-between;
+    list-style: none;
+}
+.header__nav-link{
+    text-decoration: none;
+    font-size: inherit;
+    color: #918E8D;
+}
+.setting{
+    margin:5rem 20vw;
+    border-radius: 1rem;
+    background-color:#fff;
+    width: 40rem;
+    padding: 2rem 4rem;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.1);
+}
+.setting__input{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 1rem 0;
+    margin: 1rem 0;
+}
+.setting__input::placeholder{
+    color:currentColor;
+    font: 1.8rem;
+    font-weight:700;
+    letter-spacing: 1px;
+}
+.setting__block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+}
+.setting__toggle{
+    background-color: #EBEBEB;
+    height: 2rem;
+    width: 5rem;
+    border-radius: 3rem;
+    position: relative;
+    display:flex;
+    align-items:center;
+    font-size: 1.3rem;
+    transition: background-color .1s;
+}
+.setting__toggler{
+    display:none;
+}
+.setting__toggle::before{
+    content:"OFF";
+    display: flex;
+    align-items:center;
+    height: 150%;
+    width: 200%;
+    border: 1px solid #EBEBEB;
+    border-radius: 5rem;
+    position:absolute;
+    top:50%;
+    left:50%;
+    padding-left:1rem;
+    transform: translate(-70%, -50%);
+}
+.setting__toggle::after{
+    content:"";
+    display:inline-block;
+    height: 1.8rem;
+    width:1.8rem;
+    border-radius:50%;
+    background-color: #FFF;
+    margin-left:2px;
+    position:absolute;
+    right:3rem;
+    transition: all .2s;
+}
+.setting__toggler:checked ~ .setting__toggle{
+    background-color: #0E0E0E;
+}
+.setting__toggler:checked ~ .setting__toggle::before{
+    content:"ON"
+}
+.setting__toggler:checked ~ .setting__toggle::after{
+    right:2px;
+}
+.upgrade{
+    margin:5rem 0vw 5rem 40vw;
+    border-left: 5px solid #ff8c3f;
+    border-radius: 5px;
+    background-color:#fff;
+    width: 70rem;
+    padding: 2rem 4rem;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn{
+    border: none;
+    display: inline-block;
+    padding: 1rem 1.7rem;
+    border-radius: 3rem;
+    background-color: #0E0E0E;
+    color: #eee;
+    font-size: inherit;
+    font-family: inherit;
+}
+.btn--capitalize{
+    text-transform: uppercase;
+    font-size: 1.4rem;
+}
+.collaborators{
+    margin:5rem 0vw 5rem 25vw;
+    border-radius: 1rem;
+    padding: 2rem 4rem;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.1);
+    background-color:#fff;
+    width: 65rem;
+    display: grid;
+    grid-template-columns:  repeat(3, 1fr);
+    align-items: center;
+    justify-items: end;
+    row-gap: 1rem;
+}
+.collaborators__text,
+.collaborators__heading,
+.collaborators__btn{
+    grid-column: 1 / -1;
+    justify-self: start;
+}
+.collaborators__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.colaborators__id{
+    display: flex;
+    align-items: center;
+    justify-self: start;
+}
+.colaborators__img{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    background-position: top;
+    background-size: cover;
+    margin-right:1rem;
+}
+.collaborators__title{
+    outline: none;
+    border: none;
+    text-align-last: right;
+    font-size: inherit;
+    font-family: inherit;
+   
+}
+.collaborators__title option{
+    direction: rtl;
+}
+.collaborators__btn{
+    justify-self: start;
+    margin-top: 3rem;
+}
+.img-1{
+    background-image: url(/photo/img-3.png);
+}
+.img-2{
+    background-image: url(/photo/hannah.png);
+}
+
+@media only screen and (max-width: 1200px){
+    html{
+        font-size: 50%;
+    }
+    .setting{
+        margin:5rem 15vw;
+    }
+    .upgrade{
+        margin:5rem 0vw 5rem 30vw;
+    }
+    .collaborators{
+        margin:5rem 0vw 5rem 20vw;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .setting,
+    .upgrade,
+    .collaborators{
+        margin:5rem 10vw;
+        width: calc(100% - 20vw);
+    }
+}
+
+@media only screen and (max-width: 550px){
+    html{
+        font-size:30% ;
+    }
+    .setting,
+    .upgrade,
+    .collaborators{
+        margin:5rem 2.5vw;
+        width: calc(100% - 5vw);
+    }
+}

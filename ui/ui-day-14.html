@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting Component</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/ui-14.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo"><img src="/photo/logo-1.jpeg " alt="Logo" class="header__logo-img"></div>
+        <ul class="header__nav-list">
+            <li class="header__nav-item"><a href="#" class="header__nav-link">Designs</a></li>
+            <li class="header__nav-item"><a href="#" class="header__nav-link">About</a></li>
+            <li class="header__nav-item"><a href="#" class="header__nav-link">License</a></li>
+            <li class="header__nav-item"><a href="#" class="header__nav-link">Blog</a></li>
+            <li class="header__nav-item"><a href="#" class="header__nav-link">Contact</a></li>
+        </ul>
+    </header>
+    <section class="setting">
+        <input type="text" placeholder="Type something" class="setting__input">
+        <div class="setting__block">
+            <p class="setting__block-text">Display labels</p>
+            <input type="checkbox" class="setting__toggler" id="toggle"><label for="toggle" class="setting__toggle"></label>
+        </div>
+        <div class="setting__block">
+            <p class="setting__block-text">Show branding</p>
+            <input type="checkbox" class="setting__toggler" id="toggle-2"><label for="toggle-2" class="setting__toggle"></label>
+        </div>
+    </section>
+    <section class="upgrade">
+        <p class="upgrade__text"> A paid plan is required to customize barnding</p>
+        <button class="btn btn--capitalize"> Upgrade now</button>
+    </section>
+    <section  class="collaborators">
+        <h3 class="collaborators__heading">Collaborators</h3>
+        <p class="collaborators__text">Invite people to help you manage  the project you are working on.</p>
+
+            <div class="colaborators__id">
+                <div class="colaborators__img img-1"></div>
+                <p class="collaborators__name">Marie Wills</p>
+            </div>
+            
+                <select name="title" id="title" class="collaborators__title">
+                    <option>Administrator</option>
+                    <option>Editor</option>
+                    <option>Designer</option>
+                </select>
+
+            <div class="collaborators__edit">Remove</div>
+        
+
+
+            <div id="hannah" class="colaborators__id">
+                <div class="colaborators__img img-2"></div>
+                <p class="collaborators__name">Hannah Brown</p>
+            </div>
+
+            <select name="title" id="title" class="collaborators__title">
+                <option>Administrator</option>
+                <option>Editor</option>
+                <option>Designer</option>
+            </select>
+
+            <div class="collaborators__edit">Remove</div>
+
+
+        <button class="btn collaborators__btn"><span>+</span> Invite someone</button>
+    </section>
+</body>
+</html>
