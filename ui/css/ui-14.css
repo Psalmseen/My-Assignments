@@ -198,10 +198,10 @@ body{
     margin-top: 3rem;
 }
 .img-1{
-    background-image: url("/photo/img-3.png");
+    background-image: url("../photo/img-3.png");
 }
 .img-2{
-    background-image: url(/photo/hannah.png);
+    background-image: url(../photo/hannah.png);
     
 }
 
